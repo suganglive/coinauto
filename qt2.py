@@ -1,27 +1,18 @@
 import sys
 from PyQt5.QtWidgets import *
-from PyQt5 import uic
 from PyQt5.QtCore import *
-import pyupbit
 
-form_class = uic.loadUiType("mywindow.ui")[0]
-
-class MyWindow(QMainWindow, form_class):
+class MyWindow(QMainWindow):
     def __init__(self):
         super().__init__()
-        self.setupUi(self)
-
         self.timer = QTimer(self)
         self.timer.start(1000)
-        self.timer.timeout.connect(self.inquiry)
+        self.timer.timeout.connect(self.timeout)
 
-    def inquiry(self):
+    def timeout(self):
         cur_time = QTime.currentTime()
         str_time = cur_time.toString("hh:mm:ss")
         self.statusBar().showMessage(str_time)
-        price = pyupbit.get_current_price("KRW-BTC")
-        self.lineEdit.setText(str(price))
-
 
 app = QApplication(sys.argv)
 window = MyWindow()
