@@ -1,6 +1,7 @@
 import sys
 from PyQt5.QtWidgets import *
 from PyQt5 import uic
+import pykor
 
 form_class = uic.loadUiType("mywindow.ui")[0]
 
