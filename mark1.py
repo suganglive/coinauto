@@ -94,4 +94,4 @@ while True:
 
     except:
         print("에러 발생")
-    time.sleep(10)
+    time.sleep(1)
