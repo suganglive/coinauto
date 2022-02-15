@@ -1,3 +1,4 @@
+# 업비트, 투자전략 8, Coins : [BTC]
 import pyupbit
 import time
 import datetime
