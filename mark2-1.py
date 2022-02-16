@@ -176,15 +176,18 @@ while a == 0:
 
         krw = upbit.get_balance("KRW")
         a = 1
-    except:
-        print("기본 값 오류")
-        time.sleep(10)
+    except Exception as e:
+        print(e)
+        time.sleep(5)
 
 print("프로그램 가동 중...")
 while True:
     try:
         now = datetime.datetime.now()
-        if mid < now < mid + datetime.timedelta(seconds=10):
+        if mid < now < mid + datetime.timedelta(seconds=20):
+            sell_limit()
+            mid = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=8, minutes=59)
+            time.sleep(60)
             btc_target = get_target_price("KRW-BTC")
             eth_target = get_target_price("KRW-ETH")
             xrp_target = get_target_price("KRW-XRP")
@@ -193,22 +196,20 @@ while True:
             eth_ma5 = get_ma5("KRW-ETH")
             xrp_ma5 = get_ma5("KRW-XRP")
             ltc_ma5 = get_ma5("KRW-LTC")
-            sell_limit()
+            btc_open = get_open("KRW-BTC")
+            eth_open = get_open("KRW-ETH")
+            xrp_open = get_open("KRW-XRP")
+            ltc_open = get_open("KRW-LTC")
             btc_status = 0
             eth_status = 0
             xrp_status = 0
             ltc_status = 0
             krw = upbit.get_balance("KRW")
-            mid = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(1)
 
         btc_current_price = pyupbit.get_current_price("KRW-BTC")
         eth_current_price = pyupbit.get_current_price("KRW-ETH")
         xrp_current_price = pyupbit.get_current_price("KRW-XRP")
         ltc_current_price = pyupbit.get_current_price("KRW-LTC")
-        btc_open = get_open("KRW-BTC")
-        eth_open = get_open("KRW-ETH")
-        xrp_open = get_open("KRW-XRP")
-        ltc_open = get_open("KRW-LTC")
         if btc_current_price > btc_target and btc_status == 0 and btc_open > btc_ma5:
             buy_btc()
             btc_status = 1
@@ -224,7 +225,6 @@ while True:
         if ltc_current_price > ltc_target and ltc_status == 0 and ltc_open > ltc_ma5:
             buy_ltc()
             ltc_status = 1
-
-    except:
-        print("에러 발생")
+    except Exception as e:
+        print(e)
     time.sleep(1)
