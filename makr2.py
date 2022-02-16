@@ -132,19 +132,23 @@ def sellable():
 def sell_limit():
     btc_unit = upbit.get_balance("BTC")
     btc_price = sellable()[0]
-    upbit.sell_limit_order("KRW-BTC", btc_price, btc_unit)
+    if btc_unit > 0:
+        upbit.sell_limit_order("KRW-BTC", btc_price, btc_unit)
 
     eth_unit = upbit.get_balance("ETH")
     eth_price = sellable()[1]
-    upbit.sell_limit_order("KRW-ETH", eth_price, eth_unit)
+    if eth_unit > 0:
+        upbit.sell_limit_order("KRW-ETH", eth_price, eth_unit)
 
     xrp_unit = upbit.get_balance("XRP")
     xrp_price = sellable()[2]
-    upbit.sell_limit_order("KRW-XRP", xrp_price, xrp_unit)
+    if xrp_unit > 0:
+        upbit.sell_limit_order("KRW-XRP", xrp_price, xrp_unit)
 
     ltc_unit = upbit.get_balance("LTC")
     ltc_price = sellable()[3]
-    upbit.sell_limit_order("KRW-LTC", ltc_price, ltc_unit)
+    if ltc_unit > 0:
+        upbit.sell_limit_order("KRW-LTC", ltc_price, ltc_unit)
 
 now = datetime.datetime.now()
 mid = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(1)
@@ -190,6 +194,7 @@ while True:
             xrp_status = 0
             ltc_status = 0
             krw = upbit.get_balance("KRW")
+            print(krw)
 
         btc_current_price = pyupbit.get_current_price("KRW-BTC")
         eth_current_price = pyupbit.get_current_price("KRW-ETH")
@@ -199,19 +204,19 @@ while True:
         eth_open = get_open("KRW-ETH")
         xrp_open = get_open("KRW-XRP")
         ltc_open = get_open("KRW-LTC")
-        if btc_current_price > btc_target and btc_status == 0 and btc_open > btc_ma5:
+        if btc_current_price > btc_target and btc_status == 0 and btc_open >= btc_ma5:
             buy_btc()
             btc_status = 1
 
-        if eth_current_price > eth_target and eth_status == 0 and eth_open > eth_ma5:
+        if eth_current_price > eth_target and eth_status == 0 and eth_open >= eth_ma5:
             buy_eth()
             eth_status = 1
 
-        if xrp_current_price > xrp_target and xrp_status == 0 and xrp_open > xrp_ma5:
+        if xrp_current_price > xrp_target and xrp_status == 0 and xrp_open >= xrp_ma5:
             buy_xrp()
             xrp_status = 1
 
-        if ltc_current_price > ltc_target and ltc_status == 0 and ltc_open > ltc_ma5:
+        if ltc_current_price > ltc_target and ltc_status == 0 and ltc_open >= ltc_ma5:
             buy_ltc()
             ltc_status = 1
 

@@ -10,6 +10,7 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     secret_key = lines[1].strip()
     upbit = pyupbit.Upbit(access_key, secret_key)
 
-xrp_orderbook = pyupbit.get_orderbook("KRW-XRP")
-xrp_price = xrp_orderbook["orderbook_units"][0]['ask_price']
-print(xrp_price)
+now = datetime.datetime.now()
+mid = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=9)
+print(now)
+print(mid)

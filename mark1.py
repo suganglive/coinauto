@@ -1,4 +1,4 @@
-# 업비트, 투자전략 8, Coins : [BTC]
+# 업비트, 상승장, 변동성 돌파, Coins : [BTC]
 import pyupbit
 import time
 import datetime
