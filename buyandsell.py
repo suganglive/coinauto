@@ -11,6 +11,18 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     upbit = pyupbit.Upbit(access_key, secret_key)
 
 now = datetime.datetime.now()
-mid = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=9)
+nine = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11,minutes=25)
 print(now)
-print(mid)
+print(nine)
+nine = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11,minutes=30)
+print(nine)
+
+while True:
+    now = datetime.datetime.now()
+    if nine < now < nine + datetime.timedelta(seconds=10):
+        nine = nine + datetime.timedelta(1)
+        print(nine)
+        print("It's time")
+    else:
+        print("not yet")
+    time.sleep(1)

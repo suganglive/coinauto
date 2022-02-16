@@ -219,7 +219,6 @@ while True:
         if ltc_current_price > ltc_target and ltc_status == 0 and ltc_open >= ltc_ma5:
             buy_ltc()
             ltc_status = 1
-
     except:
         print("에러 발생")
     time.sleep(1)
