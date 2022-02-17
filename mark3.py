@@ -1,4 +1,5 @@
 # 바이낸스, 상승장, 변동성 돌파, 변동성 조절 Coins : [BTC, ETH, XRP, LTC]
+# nohup python3 mark3.py > output.log &
 import ccxt
 import time
 import datetime
