@@ -1,5 +1,5 @@
 # 업비트, 상승장, 변동성 돌파, 변동성 조절 Coins : [BTC, ETH, XRP, LTC], 9시 초기화, 로그파일생성, 9시 체결 여부 확인, 모든 함수 재사용 가능
-# nohup python3 bitcoinAutoTrade.py > output.log &
+# nohup python3 mark2-3.py > output.log &
 import pyupbit
 import time
 import datetime
