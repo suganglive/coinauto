@@ -1,4 +1,5 @@
 import logging
+import time
 
 logging.basicConfig(filename='test.log', level=logging.DEBUG, format='%(asctime)s:%(message)s')
 
@@ -9,5 +10,3 @@ def add(a, b):
 a = 1
 b = 2
 
-add = add(a, b)
-logging.debug(add)
