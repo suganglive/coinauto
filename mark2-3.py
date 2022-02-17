@@ -1,4 +1,5 @@
 # 업비트, 상승장, 변동성 돌파, 변동성 조절 Coins : [BTC, ETH, XRP, LTC], 9시 초기화, 로그파일생성, 9시 체결 여부 확인, 모든 함수 재사용 가능
+# nohup python3 bitcoinAutoTrade.py > output.log &
 import pyupbit
 import time
 import datetime
@@ -63,6 +64,7 @@ def get_ma5(ticker):
 
 def buyable(ticker):
     target = get_target_price(ticker)
+    target = target * 1.002
     if target - 1 < 0:
         if target * 10 - 1 < 0:
             target = target * 10000
@@ -240,7 +242,7 @@ while True:
                 if upbit.get_balance(ticker) != 0:
                     sell_limit(ticker)
                     logging.info(ticker, "sell order submitted")
-            time.sleep(10)
+            time.sleep(60)
             for ticker in tickers:
                 if upbit.get_order(ticker):
                     upbit.cancel_order(ticker)
