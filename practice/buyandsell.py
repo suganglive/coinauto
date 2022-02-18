@@ -27,11 +27,4 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
 #         print("not yet")
 #     time.sleep(1)
 
-def get_ma5(ticker):
-    df = pyupbit.get_ohlcv(ticker)
-    open = df['open']
-    ma = open.rolling(window=5).mean()
-    return ma[-1]
-
-# print(get_ma5("KRW-BTC"))
-print(type(pyupbit.get_ohlcv("KRW-BTC")))
+upbit.buy_limit_order("KRW-BTC", 30000000, 0.202312437456294578693457934756934675293)

@@ -6,7 +6,7 @@ import datetime
 import math
 import logging
 
-logging.basicConfig(filename='mark2-3.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='mark2-4.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
@@ -284,24 +284,37 @@ while True:
         xrp_current_price = pyupbit.get_current_price("KRW-XRP")
         ltc_current_price = pyupbit.get_current_price("KRW-LTC")
         if btc_current_price > btc_target and btc_status == 0 and btc_open > btc_ma5:
-            buy_limit("KRW-BTC")
-            btc_status = 1
-            logging.info("btc get")
+            try:
+                buy_limit("KRW-BTC")
+                btc_status = 1
+                logging.info("btc get")
+            except Exception as e:
+                logging.info("btc buy error")
 
         if eth_current_price > eth_target and eth_status == 0 and eth_open > eth_ma5:
-            buy_limit("KRW-ETH")
-            eth_status = 1
-            logging.info("eth get")
+            try:
+                buy_limit("KRW-ETH")
+                eth_status = 1
+                logging.info("eth get")
+            except Exception as e:
+                logging.info("eth buy error")
 
         if xrp_current_price > xrp_target and xrp_status == 0 and xrp_open > xrp_ma5:
-            buy_limit("KRW-XRP")
-            xrp_status = 1
-            logging.info("xrp get")
+            try:
+                buy_limit("KRW-XRP")
+                xrp_status = 1
+                logging.info("xrp get")
+            except Exception as e:
+                logging.info("xrp buy error")
 
         if ltc_current_price > ltc_target and ltc_status == 0 and ltc_open > ltc_ma5:
-            buy_limit("KRW-LTC")
-            ltc_status = 1
-            logging.info("ltc get")
+            try:
+                buy_limit("KRW-LTC")
+                ltc_status = 1
+                logging.info("ltc get")
+            except Exception as e:
+                logging.info("ltc buy error")
+
     except Exception as e:
         logging.info("programm error : " + str(e))
     time.sleep(1)
