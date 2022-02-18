@@ -1,5 +1,6 @@
 import ccxt
 import datetime
+from 
 
 with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     lines = f.readlines()
@@ -10,3 +11,7 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
 btc_unit = binance.fetch_balance()["BTC"]['free']
 if btc_unit > 0:
     print("hi")
+
+print(binance.fetch_balance()["BTC"]["total"])
+a = binance.
+
