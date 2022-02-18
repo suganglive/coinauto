@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 
-# Form implementation generated from reading ui file '/Users/sugang/Documents/GitHub/coinauto/bull.ui'
+# Form implementation generated from reading ui file '/Users/sugang/Documents/GitHub/coinauto/noneed/bull.ui'
 #
 # Created by: PyQt5 UI code generator 5.15.6
 #
