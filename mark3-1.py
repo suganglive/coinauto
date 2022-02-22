@@ -9,15 +9,15 @@ import pandas as pd
 
 logging.basicConfig(filename='mark3-1.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-access_key = "a"
-secret_key = "b"
-binance = ccxt.binance({'apiKey': access_key, 'secret': secret_key})
+# access_key = "a"
+# secret_key = "b"
+# binance = ccxt.binance({'apiKey': access_key, 'secret': secret_key})
 
-# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
-#     lines = f.readlines()
-#     access_key = lines[2].strip()
-#     secret_key = lines[3].strip()
-#     binance = ccxt.binance({'apiKey': access_key, 'secret': secret_key})
+with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+    lines = f.readlines()
+    access_key = lines[2].strip()
+    secret_key = lines[3].strip()
+    binance = ccxt.binance({'apiKey': access_key, 'secret': secret_key})
 
 tickers = ["BTC/USDT", "ETH/USDT", "XRP/USDT", "LTC/USDT"]
 
@@ -207,7 +207,7 @@ def get_current_price(ticker):
 
 
 now = datetime.datetime.now()
-nine = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=12, minutes=8)
+nine = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=10, minutes=16)
 if now > nine:
     nine = nine + datetime.timedelta(1)
 
