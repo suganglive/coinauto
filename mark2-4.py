@@ -8,9 +8,15 @@ import logging
 
 logging.basicConfig(filename='mark2-4.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-access_key = "a"
-secret_key = "b"
-upbit = pyupbit.Upbit(access_key, secret_key)
+# access_key = "a"
+# secret_key = "b"
+# upbit = pyupbit.Upbit(access_key, secret_key)
+
+with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+    lines = f.readlines()
+    access_key = lines[0].strip()
+    secret_key = lines[1].strip()
+    upbit = pyupbit.Upbit(access_key, secret_key)
 
 tickers = ["KRW-BTC", "KRW-ETH", "KRW-XRP", "KRW-LTC"]
 
@@ -297,7 +303,7 @@ while True:
                 eth_status = 1
                 logging.info("eth get")
             except Exception as e:
-                logging.info("eth buy error")
+                logging.info("eth buy error", str(e))
 
         if xrp_current_price > xrp_target and xrp_status == 0 and xrp_open > xrp_ma5:
             try:
