@@ -294,7 +294,7 @@ while True:
             logging.info(f"eth_percent = {eth_percent}, eth_open : {eth_open}, eth_ma5 : {eth_ma5}, eth_target : {eth_target}, eth_status : {eth_status}")
             logging.info(f"xrp_percent = {xrp_percent}, xrp_open : {xrp_open}, xrp_ma5 : {xrp_ma5}, xrp_target : {xrp_target}, xrp_status : {xrp_status}")
             logging.info(f"ltc_percent = {ltc_percent}, ltc_open : {ltc_open}, ltc_ma5 : {ltc_ma5}, ltc_target : {ltc_target}, ltc_status : {ltc_status}")
-            logging.info("krw_balance : ", krw)
+            logging.info(f"krw_balance : {krw}")
 
         btc_current_price = pyupbit.get_current_price("KRW-BTC")
         eth_current_price = pyupbit.get_current_price("KRW-ETH")
