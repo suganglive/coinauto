@@ -287,6 +287,9 @@ while True:
             eth_status = 0
             xrp_status = 0
             ltc_status = 0
+            krw1 = upbit.get_balance("KRW")
+            profit = krw1/krw -1
+            logging.info(f"profit : {profit}")
             krw = upbit.get_balance("KRW")
             krw = round(krw)
             ten = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=10)
