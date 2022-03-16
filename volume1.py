@@ -13,7 +13,7 @@ def get_tickers():
             vol1 = data['volume'].rolling(window=5).mean()
             close = data['close'].rolling(window=5).mean()
             vol2 = vol1 * close
-            dct[tick] = vol2[-1]
+            dct[tick] = vol2[-2]
         except:
             print(f"{tick}_error")
 
