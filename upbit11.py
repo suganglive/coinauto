@@ -87,7 +87,7 @@ def get_target_price(ticker):
     return target_price
 
 def get_ma5(ticker):
-    df = pb.get_daily_ohlcv_from_base(ticker = ticker)
+    df = pb.get_daily_ohlcv_from_base(ticker = ticker, count = m*24)
     open = df['open']
     ma = open.rolling(window=m).mean()
     return ma[-1]
