@@ -17,4 +17,4 @@ def get_ma10(ticker):
 a = get_ma10(ticker = ticker)
 print(a)
 
-print(pyupbit.get_ohlcv("KRW-BTC", count=10))
+print(pb.get_daily_ohlcv_from_base("KRW-BTC", base ='10h', count=240))
