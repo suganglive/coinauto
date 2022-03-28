@@ -2,7 +2,7 @@ import pyupbit
 import numpy as np
 import pandas as pd
 
-def get_daily_ohlcv_from_base(ticker="KRW-BTC", base='10h', count = 120):
+def get_daily_ohlcv_from_base(ticker="KRW-BTC", base='10h', count = 144):
     """
     :param ticker:
     :param base:

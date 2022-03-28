@@ -5,16 +5,20 @@ import logging
 import pyupbase as pb
 import uprank20 as rk
 
-m = 10
-ticker = "KRW-BTC"
+with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+    lines = f.readlines()
+    access_key = lines[1].strip()
+    secret_key = lines[2].strip()
+    upbit = pyupbit.Upbit(access_key, secret_key)
 
-def get_ma10(ticker):
-    df = pb.get_daily_ohlcv_from_base(ticker = ticker, count = m*24 + 5)
-    open = df['open']
-    ma = open.rolling(window=m).mean()
-    return ma[-1]
+# ret = upbit.cancel_order()
+# print(upbit.get_balance("KRW"))
+# print(upbit.get_order("KRW-BTC"))
+# a = upbit.get_order("KRW-BTC")
+# print(a[0]['uuid'])
+# upbit.cancel_order(a[0]['uuid'])
 
-a = get_ma10(ticker = ticker)
-print(a)
-
-print(pb.get_daily_ohlcv_from_base("KRW-BTC", base ='10h', count=240))
+if upbit.get_order("KRW-XRP"):
+    print('yes')
+else:
+    print('no')
