@@ -5,7 +5,7 @@ import logging
 import pyupbase as pb
 import uprank20_2 as rk
 
-logging.basicConfig(filename='upbit11.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='upbit12.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
