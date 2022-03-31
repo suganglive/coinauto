@@ -14,5 +14,5 @@ def get_daily_ohlcv_from_base(ticker="KRW-BTC", base='10h', count = 144):
             {'open': 'first', 'high': 'max', 'low': 'min', 'close': 'last', 'volume': 'sum'})
         return df
     except Exception as e:
-        print(e)
+        print("pyupbase", e)
         return None

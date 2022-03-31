@@ -18,7 +18,7 @@ def get_tickers(base):
             # print(vol2)
             dct[tick] = vol2[-2]
             # print(dct[tick])
-            time.sleep(0.05)
+            # time.sleep(0.05)
         except:
             print(f"{tick}_error")
 
