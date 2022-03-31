@@ -6,7 +6,7 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='upbit12.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='upbit15.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
@@ -84,7 +84,7 @@ def get_target_price(ticker):
     t_open = today['open']
     range = get_range(ticker)
     target_price = t_open + range * k
-    target_price = target_price * 1.0015
+    target_price = target_price * 1.002
     return target_price
 
 def get_ma10(ticker):
@@ -160,7 +160,7 @@ def buy_limit(ticker, krw):
 
 def sell_price(ticker):
     price = pyupbit.get_current_price(ticker)
-    price = price * 0.9985
+    price = price * 0.998
     return price
 
 def sellable(ticker):

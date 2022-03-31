@@ -4,9 +4,8 @@ import datetime
 import logging
 import pyupbase as pb
 import uprank20_2 as rk
-import math
 
-logging.basicConfig(filename='upbit12.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='upbit14.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
@@ -94,61 +93,7 @@ def get_ma10(ticker):
     return ma[-1]
 
 def buyable(ticker):
-    target = get_target_price(ticker)
-    if target - 1 < 0:
-        if target * 10 - 1 < 0:
-            target = target * 10000
-            target = math.floor(target)
-            target = target + 1
-            target = target / 10000
-        else:
-            target = target * 1000
-            target = math.floor(target)
-            target = target + 1
-            target = target / 1000
-    elif len(str(math.floor(target))) == 1:
-        target = target * 100
-        target = math.floor(target)
-        target = target + 1
-        target = target / 100
-    elif len(str(math.floor(target))) == 2:
-        target = target * 10
-        target = math.floor(target)
-        target = target + 1
-        target = target / 10
-    elif len(str(math.floor(target))) == 3:
-        target = math.floor(target)
-        target = target + 1
-    elif len(str(math.floor(target))) == 4:
-        if target % 10 <= 5: 
-            target = target / 10
-            target = math.floor(target)
-            target = target * 10
-            target = target + 5
-        else:
-            target = target / 10
-            target = math.floor(target)
-            target = target * 10
-            target = target + 10
-    elif len(str(math.floor(target))) == 5:
-        target = math.floor(target)
-        target = target + 10
-    elif len(str(math.floor(target))) == 6:
-        if (target/10) % 10 <= 5: 
-            target = target / 100
-            target = math.floor(target)
-            target = target * 100
-            target = target + 50
-        else:
-            target = target / 100
-            target = math.floor(target)
-            target = target * 100
-            target = target + 100
-    elif len(str(math.floor(target))) >=7:
-        target = target / 1000
-        target = math.floor(target)
-        target = target * 1000
-        target = target + 1000
+    target = pyupbit.get_tick_size(get_target_price(ticker))
     return target
 
 def buy_limit(ticker, krw):
@@ -164,58 +109,7 @@ def sell_price(ticker):
     return price
 
 def sellable(ticker):
-    price = sell_price(ticker)
-    if price - 1 < 0:
-        if price * 10 - 1 < 0:
-            price = price * 10000
-            price = math.floor(price)
-            price = price - 1
-            price = price / 10000
-        else:
-            price = price * 10000
-            price = math.floor(price)
-            price = price - 1
-            price = price / 10000
-    elif len(str(math.floor(price))) == 1:
-        price = price * 100
-        price = math.floor(price)
-        price = price - 1
-        price = price / 100
-    elif len(str(math.floor(price))) == 2:
-        price = price * 10
-        price = math.floor(price)
-        price = price / 10
-    elif len(str(math.floor(price))) == 3:
-        price = math.floor(price)
-        price = price - 1
-    elif len(str(math.floor(price))) == 4:
-        if price % 10 <= 5: 
-            price = price / 10
-            price = math.floor(price)
-            price = price * 10
-        else:
-            price = price / 10
-            price = math.floor(price)
-            price = price * 10
-            price = price + 5
-    elif len(str(math.floor(price))) == 5:
-        price = price / 10
-        price = math.floor(price)
-        price = price * 10
-    elif len(str(math.floor(price))) == 6:
-        if (price/10) % 10 <= 5: 
-            price = price / 100
-            price = math.floor(price)
-            price = price * 100
-        else:
-            price = price / 100
-            price = math.floor(price)
-            price = price * 100
-            price = price + 50
-    elif len(str(math.floor(price))) >=7:
-        price = price / 1000
-        price = math.floor(price)
-        price = price * 1000
+    price = pyupbit.get_tick_size(sell_price(ticker))
     return price
 
 def sell_limit(ticker):

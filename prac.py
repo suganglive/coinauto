@@ -3,7 +3,8 @@ import time
 import datetime
 import logging
 import pyupbase as pb
-import uprank20 as rk
+import uprank20_2 as rk
+import math
 
 with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     lines = f.readlines()
@@ -11,14 +12,59 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     secret_key = lines[2].strip()
     upbit = pyupbit.Upbit(access_key, secret_key)
 
-# ret = upbit.cancel_order()
-# print(upbit.get_balance("KRW"))
-# print(upbit.get_order("KRW-BTC"))
-# a = upbit.get_order("KRW-BTC")
-# print(a[0]['uuid'])
-# upbit.cancel_order(a[0]['uuid'])
+def sellable(aa):
+    price = aa
+    if price - 1 < 0:
+        if price * 10 - 1 < 0:
+            price = price * 10000
+            price = math.floor(price)
+            price = price - 1
+            price = price / 10000
+        else:
+            price = price * 10000
+            price = math.floor(price)
+            price = price - 1
+            price = price / 10000
+    elif len(str(math.floor(price))) == 1:
+        price = price * 100
+        price = math.floor(price)
+        price = price - 1
+        price = price / 100
+    elif len(str(math.floor(price))) == 2:
+        price = price * 10
+        price = math.floor(price)
+        price = price / 10
+    elif len(str(math.floor(price))) == 3:
+        price = math.floor(price)
+        price = price - 1
+    elif len(str(math.floor(price))) == 4:
+        if price % 10 <= 5: 
+            price = price / 10
+            price = math.floor(price)
+            price = price * 10
+        else:
+            price = price / 10
+            price = math.floor(price)
+            price = price * 10
+            price = price + 5
+    elif len(str(math.floor(price))) == 5:
+        price = price / 10
+        price = math.floor(price)
+        price = price * 10
+    elif len(str(math.floor(price))) == 6:
+        if (price/10) % 10 <= 5: 
+            price = price / 100
+            price = math.floor(price)
+            price = price * 100
+        else:
+            price = price / 100
+            price = math.floor(price)
+            price = price * 100
+            price = price + 50
+    elif len(str(math.floor(price))) >=7:
+        price = price / 1000
+        price = math.floor(price)
+        price = price * 1000
+    return price
 
-if upbit.get_order("KRW-XRP"):
-    print('yes')
-else:
-    print('no')
+print(sellable(0.997))
