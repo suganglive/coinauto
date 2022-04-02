@@ -335,7 +335,7 @@ async def program():
                 
                 if coin1_current_price > 1 and coin1_status == 0 and coin1_open >= coin1_ma10:
                     try:
-                        buy_limit(coin1, krw)
+                        # buy_limit(coin1, krw)
                         print("buy coin1")
                         coin1_status = 1
                         logging.info("coin1 get")
@@ -350,11 +350,9 @@ async def program():
                         logging.info("coin2 get")
                     except Exception as e:
                         logging.info("coin2 buy error", str(e))
-
-                logging.info("test text")
+                print(now)
             except Exception as e:
                 logging.info("programm error : " + str(e))
-            # time.sleep(1)
 
 async def main():
     await program()

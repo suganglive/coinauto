@@ -982,11 +982,9 @@ async def program():
                         logging.info("coin20 get")
                     except Exception as e:
                         logging.info("coin20 buy error", str(e))
-                logging.info(data['cd'], data['tp'], "test text")
             except Exception as e:
                 logging.info("programm error : " + str(e))
 
 async def main():
     await program()
-logging.info("stage 0")
 asyncio.run(main())
