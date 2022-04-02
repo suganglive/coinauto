@@ -23,6 +23,5 @@ def get_tickers(base):
             print(f"{tick}_error")
 
     sorted_d = dict(sorted(dct.items(), key=operator.itemgetter(1), reverse=True))
-    # a = list(sorted_d.keys())[:20]
-    a = list(sorted_d.keys())[:2]
+    a = list(sorted_d.keys())[:20]
     return a

@@ -161,7 +161,6 @@ def buy_limit(ticker, krw):
     percentage = get_percentage(ticker)
     krw = krw * percentage
     price = buyable(ticker)
-    # target = get_target_price(ticker)
     unit = krw/float(price)
     upbit.buy_limit_order(ticker, price, unit)
 
@@ -433,6 +432,158 @@ while a == 0:
 logging.info("program started")
 
 async def program():
+    global upbit
+    global now
+    global end
+    global k
+    global target_v
+    global m
+    global amount
+    global base
+    global base_time
+    global krw
+    global coin1
+    global coin2
+    global coin3
+    global coin4
+    global coin5
+    global coin6
+    global coin7
+    global coin8
+    global coin9
+    global coin10
+    global coin11
+    global coin12
+    global coin13
+    global coin14
+    global coin15
+    global coin16
+    global coin17
+    global coin18
+    global coin19
+    global coin20
+    global coin1_open
+    global coin1_ma10
+    global coin1_target
+    global coin1_percent
+    global coin1_status
+    global coin2_open
+    global coin2_ma10
+    global coin2_target
+    global coin2_percent
+    global coin2_status
+    global coin3_open
+    global coin3_ma10
+    global coin3_target
+    global coin3_percent
+    global coin3_status
+    global coin4_open
+    global coin4_ma10
+    global coin4_target
+    global coin4_percent
+    global coin4_status
+    global coin5_open
+    global coin5_ma10
+    global coin5_target
+    global coin5_percent
+    global coin5_status
+    global coin6_open
+    global coin6_ma10
+    global coin6_target
+    global coin6_percent
+    global coin6_status
+    global coin7_open
+    global coin7_ma10
+    global coin7_target
+    global coin7_percent
+    global coin7_status
+    global coin8_open
+    global coin8_ma10
+    global coin8_target
+    global coin8_percent
+    global coin8_status
+    global coin9_open
+    global coin9_ma10
+    global coin9_target
+    global coin9_percent
+    global coin9_status
+    global coin10_open
+    global coin10_ma10
+    global coin10_target
+    global coin10_percent
+    global coin10_status
+    global coin11_open
+    global coin11_ma10
+    global coin11_target
+    global coin11_percent
+    global coin11_status
+    global coin12_open
+    global coin12_ma10
+    global coin12_target
+    global coin12_percent
+    global coin12_status
+    global coin13_open
+    global coin13_ma10
+    global coin13_target
+    global coin13_percent
+    global coin13_status
+    global coin14_open
+    global coin14_ma10
+    global coin14_target
+    global coin14_percent
+    global coin14_status
+    global coin15_open
+    global coin15_ma10
+    global coin15_target
+    global coin15_percent
+    global coin15_status
+    global coin16_open
+    global coin16_ma10
+    global coin16_target
+    global coin16_percent
+    global coin16_status
+    global coin17_open
+    global coin17_ma10
+    global coin17_target
+    global coin17_percent
+    global coin17_status
+    global coin18_open
+    global coin18_ma10
+    global coin18_target
+    global coin18_percent
+    global coin18_status
+    global coin19_open
+    global coin19_ma10
+    global coin19_target
+    global coin19_percent
+    global coin19_status
+    global coin20_open
+    global coin20_ma10
+    global coin20_target
+    global coin20_percent
+    global coin20_status
+    coin1_current_price = 0
+    coin2_current_price = 0
+    coin3_current_price = 0
+    coin4_current_price = 0
+    coin5_current_price = 0
+    coin6_current_price = 0
+    coin7_current_price = 0
+    coin8_current_price = 0
+    coin9_current_price = 0
+    coin10_current_price = 0
+    coin11_current_price = 0
+    coin12_current_price = 0
+    coin13_current_price = 0
+    coin14_current_price = 0
+    coin15_current_price = 0
+    coin16_current_price = 0
+    coin17_current_price = 0
+    coin18_current_price = 0
+    coin19_current_price = 0
+    coin20_current_price = 0
+
+
     uri = "wss://api.upbit.com/websocket/v1"
 
     async with websockets.connect(uri, ping_interval=60) as websocket:
@@ -831,12 +982,11 @@ async def program():
                         logging.info("coin20 get")
                     except Exception as e:
                         logging.info("coin20 buy error", str(e))
-                logging.info("test text")
+                logging.info(data['cd'], data['tp'], "test text")
             except Exception as e:
                 logging.info("programm error : " + str(e))
-            time.sleep(1)
 
 async def main():
     await program()
-
+logging.info("stage 0")
 asyncio.run(main())
