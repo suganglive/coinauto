@@ -4,6 +4,9 @@ import asyncio
 import json
 import time
 import datetime
+import logging
+
+logging.basicConfig(filename='uppro.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 coin1 = "KRW-BTC"
 coin2 = "KRW-ETH"
@@ -26,12 +29,12 @@ coin18 = "KRW-MOC"
 coin19 = "KRW-MVL"
 coin20 = "KRW-SRM"
 
-now = datetime.datetime.now()
-end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11, minutes=32)
+# now = datetime.datetime.now()
+# end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11, minutes=32)
 
-if now > end:
-    end = end + datetime.timedelta(1)
-a = "hi"
+# if now > end:
+#     end = end + datetime.timedelta(1)
+# a = "hi"
 
 
 async def program():
@@ -43,75 +46,75 @@ async def program():
         await websocket.send(subscribe_data)
 
         now = datetime.datetime.now()
-        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=22, minutes=41)
+        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=23, minutes=00)
 
         if now > end:
             end = end + datetime.timedelta(1)
 
         while True:
             now = datetime.datetime.now()
-            print(a)
+            logging.info(a)
             if end < now:
                 break
             data = await websocket.recv()
             data = json.loads(data)
-            # print(data['cd'], data['tp'])
+            # logging.info(data['cd'], data['tp'])
             if data['cd'] == coin1:
-                print(coin1, data['tp'])
+                logging.info(coin1, data['tp'])
             elif data['cd'] == coin2:
-                print(coin2, data['tp'])
+                logging.info(coin2, data['tp'])
             elif data['cd'] == coin3:
-                print(coin3, data['tp'])
+                logging.info(coin3, data['tp'])
             elif data['cd'] == coin4:
-                print(coin4, data['tp'])
+                logging.info(coin4, data['tp'])
             elif data['cd'] == coin5:
-                print(coin5, data['tp'])
+                logging.info(coin5, data['tp'])
             elif data['cd'] == coin6:
-                print(coin6, data['tp'])
+                logging.info(coin6, data['tp'])
             elif data['cd'] == coin7:
-                print(coin7, data['tp'])
+                logging.info(coin7, data['tp'])
             elif data['cd'] == coin8:
-                print(coin8, data['tp'])
+                logging.info(coin8, data['tp'])
             elif data['cd'] == coin9:
-                print(coin9, data['tp'])
+                logging.info(coin9, data['tp'])
             elif data['cd'] == coin10:
-                print(coin10, data['tp'])
+                logging.info(coin10, data['tp'])
             elif data['cd'] == coin11:
-                print(coin11, data['tp'])
+                logging.info(coin11, data['tp'])
             elif data['cd'] == coin12:
-                print(coin12, data['tp'])
+                logging.info(coin12, data['tp'])
             elif data['cd'] == coin13:
-                print(coin13, data['tp'])
+                logging.info(coin13, data['tp'])
             elif data['cd'] == coin14:
-                print(coin14, data['tp'])
+                logging.info(coin14, data['tp'])
             elif data['cd'] == coin15:
-                print(coin15, data['tp'])
+                logging.info(coin15, data['tp'])
             elif data['cd'] == coin16:
-                print(coin16, data['tp'])
+                logging.info(coin16, data['tp'])
             elif data['cd'] == coin17:
-                print(coin17, data['tp'])
+                logging.info(coin17, data['tp'])
             elif data['cd'] == coin18:
-                print(coin18, data['tp'])
+                logging.info(coin18, data['tp'])
             elif data['cd'] == coin19:
-                print(coin19, data['tp'])
+                logging.info(coin19, data['tp'])
             elif data['cd'] == coin20:
-                print(coin20, data['tp'])
+                logging.info(coin20, data['tp'])
             
 async def main():
     await program()
-
-# asyncio.run(main())
-# print("hi")
-loop = asyncio.get_event_loop()
-loop.run_until_complete(main())
-loop.close()
+logging.info("stage 0")
+asyncio.run(main())
+# logging.info("hi")
+# loop = asyncio.get_event_loop()
+# loop.run_until_complete(main())
+# loop.close()
 
 # async def bithumb_ws_client():
 #     uri = "wss://pubwss.bithumb.com/pub/ws"
 
 #     async with websockets.connect(uri, ping_interval = None) as websocket:
 #         greeting = await websocket.recv()
-#         print(greeting)
+#         logging.info(greeting)
 
 #         subscribe_fmt = {"type":"ticker", "symbols": ["BTC_KRW"], "tickTypes": ["1H"]}
 #         subscribe_data = json.dumps(subscribe_fmt)
@@ -120,7 +123,7 @@ loop.close()
 #         while True:
 #             data = await websocket.recv()
 #             data = json.loads(data)
-#             print(data)
+#             logging.info(data)
 
 # async def main():
 #     await bithumb_ws_client()
