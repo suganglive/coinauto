@@ -144,8 +144,8 @@ def buy_limit(ticker, krw):
     krw = krw * percentage
     price = buyable(ticker)
     # target = get_target_price(ticker)
-    unit = krw/float(price)
-    upbit.buy_limit_order(ticker, price, unit)
+    # unit = krw/float(price)
+    upbit.buy_limit_order(ticker, price, 100)
 
 def sell_price(ticker):
     price = pyupbit.get_current_price(ticker)
@@ -273,6 +273,7 @@ async def program():
     global amount
     global base
     global base_time
+    global krw
 
     uri = "wss://api.upbit.com/websocket/v1"
 
@@ -332,9 +333,9 @@ async def program():
                 elif data['cd'] == coin2:
                     coin2_current_price = data['tp']
                 
-                if coin1_current_price > coin1_target and coin1_status == 0 and coin1_open >= coin1_ma10:
+                if coin1_current_price > 1 and coin1_status == 0 and coin1_open >= coin1_ma10:
                     try:
-                        # buy_limit(coin1, krw)
+                        buy_limit(coin1, krw)
                         print("buy coin1")
                         coin1_status = 1
                         logging.info("coin1 get")

@@ -1,574 +1,313 @@
-2022-04-02 23:09:55,567:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:09:55,568:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:09:55,568:krw_balance : 73939348
-2022-04-02 23:09:55,568:program started
-2022-04-02 23:11:50,587:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:11:50,587:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:11:50,587:krw_balance : 73939348
-2022-04-02 23:11:50,587:program started
-2022-04-02 23:11:50,743:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:51,752:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:52,754:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:53,760:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:54,765:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:55,770:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:56,774:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:57,779:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:58,783:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:11:59,789:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:12:00,791:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:12:01,797:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:12:02,802:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:12:03,808:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:12:04,814:test text
-2022-04-02 23:12:05,819:test text
-2022-04-02 23:17:01,455:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:17:01,456:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:17:01,456:krw_balance : 73939348
-2022-04-02 23:17:01,456:program started
-2022-04-02 23:17:01,904:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:17:02,912:programm error : local variable 'coin2_target' referenced before assignment
-2022-04-02 23:17:03,915:programm error : local variable 'coin2_target' referenced before assignment
-2022-04-02 23:17:04,921:programm error : local variable 'coin2_target' referenced before assignment
-2022-04-02 23:17:33,794:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:17:33,795:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:17:33,795:krw_balance : 73939348
-2022-04-02 23:17:33,795:program started
-2022-04-02 23:17:34,025:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:35,031:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:36,036:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:37,038:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:38,042:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:39,044:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:40,048:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:41,051:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:42,058:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:43,064:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:44,065:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:45,072:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:46,077:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:47,081:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:48,085:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:49,091:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:50,095:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:17:51,100:programm error : local variable 'coin1_target' referenced before assignment
-2022-04-02 23:18:57,395:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:18:57,396:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:18:57,396:krw_balance : 73939348
-2022-04-02 23:18:57,396:program started
-2022-04-02 23:18:57,637:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:18:58,645:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:18:59,649:programm error : local variable 'coin1_current_price' referenced before assignment
-2022-04-02 23:19:00,653:test text
-2022-04-02 23:19:01,659:test text
-2022-04-02 23:19:02,660:test text
-2022-04-02 23:19:56,546:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:19:56,547:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:19:56,547:krw_balance : 73939348
-2022-04-02 23:19:56,547:program started
-2022-04-02 23:19:56,803:programm error : local variable 'coin2_current_price' referenced before assignment
-2022-04-02 23:19:57,813:programm error : local variable 'coin2_current_price' referenced before assignment
-2022-04-02 23:19:58,819:programm error : local variable 'coin2_current_price' referenced before assignment
-2022-04-02 23:19:59,826:test text
-2022-04-02 23:20:00,832:test text
-2022-04-02 23:20:01,838:test text
-2022-04-02 23:20:02,845:test text
-2022-04-02 23:20:03,851:test text
-2022-04-02 23:20:04,855:test text
-2022-04-02 23:20:05,859:test text
-2022-04-02 23:20:06,865:test text
-2022-04-02 23:20:07,872:test text
-2022-04-02 23:20:08,878:test text
-2022-04-02 23:20:09,883:test text
-2022-04-02 23:20:10,888:test text
-2022-04-02 23:20:11,900:test text
-2022-04-02 23:20:12,905:test text
-2022-04-02 23:20:13,911:test text
-2022-04-02 23:20:14,915:test text
-2022-04-02 23:20:15,920:test text
-2022-04-02 23:20:16,926:test text
-2022-04-02 23:20:17,932:test text
-2022-04-02 23:20:18,938:test text
-2022-04-02 23:20:19,944:test text
-2022-04-02 23:20:20,947:test text
-2022-04-02 23:20:21,953:test text
-2022-04-02 23:20:22,960:test text
-2022-04-02 23:20:23,966:test text
-2022-04-02 23:20:24,969:test text
-2022-04-02 23:20:25,975:test text
-2022-04-02 23:20:26,978:test text
-2022-04-02 23:20:27,983:test text
-2022-04-02 23:20:28,989:test text
-2022-04-02 23:20:29,994:test text
-2022-04-02 23:20:31,000:test text
-2022-04-02 23:20:32,007:test text
-2022-04-02 23:20:33,009:test text
-2022-04-02 23:20:34,013:test text
-2022-04-02 23:20:35,019:test text
-2022-04-02 23:20:36,024:test text
-2022-04-02 23:20:37,030:test text
-2022-04-02 23:20:38,036:test text
-2022-04-02 23:21:53,869:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
-2022-04-02 23:21:53,871:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
-2022-04-02 23:21:53,871:krw_balance : 73939348
-2022-04-02 23:21:53,871:program started
-2022-04-02 23:21:54,334:programm error : local variable 'coin2_current_price' referenced before assignment
-2022-04-02 23:21:54,462:test text
-2022-04-02 23:21:54,539:test text
-2022-04-02 23:21:54,637:test text
-2022-04-02 23:21:54,643:test text
-2022-04-02 23:21:54,848:test text
-2022-04-02 23:21:54,889:test text
-2022-04-02 23:21:54,986:test text
-2022-04-02 23:21:55,149:test text
-2022-04-02 23:21:55,187:test text
-2022-04-02 23:21:55,395:test text
-2022-04-02 23:21:55,458:test text
-2022-04-02 23:21:55,574:test text
-2022-04-02 23:21:55,576:test text
-2022-04-02 23:21:55,615:test text
-2022-04-02 23:21:55,707:test text
-2022-04-02 23:21:55,727:test text
-2022-04-02 23:21:55,728:test text
-2022-04-02 23:21:55,746:test text
-2022-04-02 23:21:55,776:test text
-2022-04-02 23:21:55,862:test text
-2022-04-02 23:21:55,973:test text
-2022-04-02 23:21:56,060:test text
-2022-04-02 23:21:56,134:test text
-2022-04-02 23:21:56,197:test text
-2022-04-02 23:21:56,427:test text
-2022-04-02 23:21:56,515:test text
-2022-04-02 23:21:56,548:test text
-2022-04-02 23:21:56,610:test text
-2022-04-02 23:21:56,615:test text
-2022-04-02 23:21:56,711:test text
-2022-04-02 23:21:56,905:test text
-2022-04-02 23:21:56,990:test text
-2022-04-02 23:21:57,037:test text
-2022-04-02 23:21:57,143:test text
-2022-04-02 23:21:57,271:test text
-2022-04-02 23:21:57,345:test text
-2022-04-02 23:21:57,469:test text
-2022-04-02 23:21:57,642:test text
-2022-04-02 23:21:57,878:test text
-2022-04-02 23:21:57,946:test text
-2022-04-02 23:21:58,057:test text
-2022-04-02 23:21:58,429:test text
-2022-04-02 23:21:58,462:test text
-2022-04-02 23:21:58,527:test text
-2022-04-02 23:21:58,578:test text
-2022-04-02 23:21:58,626:test text
-2022-04-02 23:21:58,651:test text
-2022-04-02 23:21:58,655:test text
-2022-04-02 23:21:58,660:test text
-2022-04-02 23:21:58,661:test text
-2022-04-02 23:21:58,692:test text
-2022-04-02 23:21:58,698:test text
-2022-04-02 23:21:58,992:test text
-2022-04-02 23:21:59,118:test text
-2022-04-02 23:21:59,170:test text
-2022-04-02 23:21:59,249:test text
-2022-04-02 23:21:59,258:test text
-2022-04-02 23:21:59,264:test text
-2022-04-02 23:21:59,267:test text
-2022-04-02 23:21:59,272:test text
-2022-04-02 23:21:59,315:test text
-2022-04-02 23:21:59,331:test text
-2022-04-02 23:21:59,755:test text
-2022-04-02 23:21:59,756:test text
-2022-04-02 23:21:59,877:test text
-2022-04-02 23:21:59,947:test text
-2022-04-02 23:22:00,097:test text
-2022-04-02 23:22:00,165:test text
-2022-04-02 23:22:00,257:test text
-2022-04-02 23:22:00,300:test text
-2022-04-02 23:22:00,365:test text
-2022-04-02 23:22:00,385:test text
-2022-04-02 23:22:00,400:test text
-2022-04-02 23:22:00,865:test text
-2022-04-02 23:22:00,958:test text
-2022-04-02 23:22:01,085:test text
-2022-04-02 23:22:01,160:test text
-2022-04-02 23:22:01,234:test text
-2022-04-02 23:22:01,404:test text
-2022-04-02 23:22:01,530:test text
-2022-04-02 23:22:01,582:test text
-2022-04-02 23:22:01,590:test text
-2022-04-02 23:22:01,591:test text
-2022-04-02 23:22:01,597:test text
-2022-04-02 23:22:01,597:test text
-2022-04-02 23:22:01,597:test text
-2022-04-02 23:22:01,604:test text
-2022-04-02 23:22:01,604:test text
-2022-04-02 23:22:01,605:test text
-2022-04-02 23:22:01,605:test text
-2022-04-02 23:22:01,606:test text
-2022-04-02 23:22:01,606:test text
-2022-04-02 23:22:01,625:test text
-2022-04-02 23:22:01,631:test text
-2022-04-02 23:22:01,632:test text
-2022-04-02 23:22:01,636:test text
-2022-04-02 23:22:01,723:test text
-2022-04-02 23:22:01,787:test text
-2022-04-02 23:22:01,860:test text
-2022-04-02 23:22:01,884:test text
-2022-04-02 23:22:01,963:test text
-2022-04-02 23:22:01,965:test text
-2022-04-02 23:22:02,038:test text
-2022-04-02 23:22:02,058:test text
-2022-04-02 23:22:02,071:test text
-2022-04-02 23:22:02,092:test text
-2022-04-02 23:22:02,160:test text
-2022-04-02 23:22:02,242:test text
-2022-04-02 23:22:02,411:test text
-2022-04-02 23:22:02,466:test text
-2022-04-02 23:22:02,471:test text
-2022-04-02 23:22:02,707:test text
-2022-04-02 23:22:03,130:test text
-2022-04-02 23:22:03,130:test text
-2022-04-02 23:22:03,130:test text
-2022-04-02 23:22:03,131:test text
-2022-04-02 23:22:03,137:test text
-2022-04-02 23:22:03,181:test text
-2022-04-02 23:22:03,213:test text
-2022-04-02 23:22:03,263:test text
-2022-04-02 23:22:03,340:test text
-2022-04-02 23:22:03,469:test text
-2022-04-02 23:22:03,525:test text
-2022-04-02 23:22:03,541:test text
-2022-04-02 23:22:03,604:test text
-2022-04-02 23:22:03,856:test text
-2022-04-02 23:22:03,857:test text
-2022-04-02 23:22:04,032:test text
-2022-04-02 23:22:04,254:test text
-2022-04-02 23:22:04,255:test text
-2022-04-02 23:22:04,255:test text
-2022-04-02 23:22:04,667:test text
-2022-04-02 23:22:04,668:test text
-2022-04-02 23:22:04,668:test text
-2022-04-02 23:22:04,668:test text
-2022-04-02 23:22:04,747:test text
-2022-04-02 23:22:04,788:test text
-2022-04-02 23:22:04,949:test text
-2022-04-02 23:22:05,074:test text
-2022-04-02 23:22:05,121:test text
-2022-04-02 23:22:05,121:test text
-2022-04-02 23:22:05,216:test text
-2022-04-02 23:22:05,481:test text
-2022-04-02 23:22:05,567:test text
-2022-04-02 23:22:06,099:test text
-2022-04-02 23:22:06,232:test text
-2022-04-02 23:22:06,611:test text
-2022-04-02 23:22:06,611:test text
-2022-04-02 23:22:06,918:test text
-2022-04-02 23:22:06,951:test text
-2022-04-02 23:22:07,035:test text
-2022-04-02 23:22:07,107:test text
-2022-04-02 23:22:07,204:test text
-2022-04-02 23:22:07,237:test text
-2022-04-02 23:22:07,297:test text
-2022-04-02 23:22:07,817:test text
-2022-04-02 23:22:07,932:test text
-2022-04-02 23:22:08,001:test text
-2022-04-02 23:22:08,085:test text
-2022-04-02 23:22:08,178:test text
-2022-04-02 23:22:08,240:test text
-2022-04-02 23:22:08,244:test text
-2022-04-02 23:22:08,440:test text
-2022-04-02 23:22:08,642:test text
-2022-04-02 23:22:08,732:test text
-2022-04-02 23:22:08,733:test text
-2022-04-02 23:22:08,855:test text
-2022-04-02 23:22:09,035:test text
-2022-04-02 23:22:09,039:test text
-2022-04-02 23:22:09,127:test text
-2022-04-02 23:22:09,200:test text
-2022-04-02 23:22:09,201:test text
-2022-04-02 23:22:09,206:test text
-2022-04-02 23:22:09,542:test text
-2022-04-02 23:22:09,597:test text
-2022-04-02 23:22:09,714:test text
-2022-04-02 23:22:09,774:test text
-2022-04-02 23:22:10,297:test text
-2022-04-02 23:22:10,298:test text
-2022-04-02 23:22:10,365:test text
-2022-04-02 23:22:10,417:test text
-2022-04-02 23:22:10,477:test text
-2022-04-02 23:22:10,814:test text
-2022-04-02 23:22:11,219:test text
-2022-04-02 23:22:11,220:test text
-2022-04-02 23:22:11,353:test text
-2022-04-02 23:22:11,553:test text
-2022-04-02 23:22:11,656:test text
-2022-04-02 23:22:11,755:test text
-2022-04-02 23:22:11,791:test text
-2022-04-02 23:22:11,851:test text
-2022-04-02 23:22:11,921:test text
-2022-04-02 23:22:11,959:test text
-2022-04-02 23:22:12,060:test text
-2022-04-02 23:22:12,365:test text
-2022-04-02 23:22:12,440:test text
-2022-04-02 23:22:12,486:test text
-2022-04-02 23:22:12,495:test text
-2022-04-02 23:22:12,521:test text
-2022-04-02 23:22:12,521:test text
-2022-04-02 23:22:12,543:test text
-2022-04-02 23:22:12,547:test text
-2022-04-02 23:22:12,567:test text
-2022-04-02 23:22:12,814:test text
-2022-04-02 23:22:12,888:test text
-2022-04-02 23:22:13,072:test text
-2022-04-02 23:22:13,143:test text
-2022-04-02 23:22:13,153:test text
-2022-04-02 23:22:13,159:test text
-2022-04-02 23:22:13,193:test text
-2022-04-02 23:22:13,197:test text
-2022-04-02 23:22:13,205:test text
-2022-04-02 23:22:13,227:test text
-2022-04-02 23:22:13,278:test text
-2022-04-02 23:22:13,362:test text
-2022-04-02 23:22:13,383:test text
-2022-04-02 23:22:13,412:test text
-2022-04-02 23:22:13,453:test text
-2022-04-02 23:22:13,474:test text
-2022-04-02 23:22:13,534:test text
-2022-04-02 23:22:13,592:test text
-2022-04-02 23:22:13,882:test text
-2022-04-02 23:22:14,076:test text
-2022-04-02 23:22:14,271:test text
-2022-04-02 23:22:14,458:test text
-2022-04-02 23:22:14,462:test text
-2022-04-02 23:22:14,467:test text
-2022-04-02 23:22:14,469:test text
-2022-04-02 23:22:14,469:test text
-2022-04-02 23:22:14,477:test text
-2022-04-02 23:22:14,477:test text
-2022-04-02 23:22:14,555:test text
-2022-04-02 23:22:14,746:test text
-2022-04-02 23:22:14,980:test text
-2022-04-02 23:22:14,983:test text
-2022-04-02 23:22:15,165:test text
-2022-04-02 23:22:15,166:test text
-2022-04-02 23:22:15,170:test text
-2022-04-02 23:22:15,185:test text
-2022-04-02 23:22:15,188:test text
-2022-04-02 23:22:15,192:test text
-2022-04-02 23:22:15,192:test text
-2022-04-02 23:22:15,195:test text
-2022-04-02 23:22:15,360:test text
-2022-04-02 23:22:15,442:test text
-2022-04-02 23:22:15,474:test text
-2022-04-02 23:22:15,491:test text
-2022-04-02 23:22:15,921:test text
-2022-04-02 23:22:16,114:test text
-2022-04-02 23:22:16,117:test text
-2022-04-02 23:22:16,144:test text
-2022-04-02 23:22:16,442:test text
-2022-04-02 23:22:16,443:test text
-2022-04-02 23:22:16,524:test text
-2022-04-02 23:22:16,553:test text
-2022-04-02 23:22:16,678:test text
-2022-04-02 23:22:16,741:test text
-2022-04-02 23:22:16,790:test text
-2022-04-02 23:22:16,791:test text
-2022-04-02 23:22:16,795:test text
-2022-04-02 23:22:16,815:test text
-2022-04-02 23:22:17,158:test text
-2022-04-02 23:22:17,467:test text
-2022-04-02 23:22:17,468:test text
-2022-04-02 23:22:17,468:test text
-2022-04-02 23:22:17,469:test text
-2022-04-02 23:22:17,469:test text
-2022-04-02 23:22:17,470:test text
-2022-04-02 23:22:17,473:test text
-2022-04-02 23:22:17,473:test text
-2022-04-02 23:22:17,479:test text
-2022-04-02 23:22:17,483:test text
-2022-04-02 23:22:17,487:test text
-2022-04-02 23:22:17,489:test text
-2022-04-02 23:22:17,494:test text
-2022-04-02 23:22:17,508:test text
-2022-04-02 23:22:17,513:test text
-2022-04-02 23:22:17,520:test text
-2022-04-02 23:22:17,520:test text
-2022-04-02 23:22:17,544:test text
-2022-04-02 23:22:17,546:test text
-2022-04-02 23:22:17,552:test text
-2022-04-02 23:22:17,602:test text
-2022-04-02 23:22:17,649:test text
-2022-04-02 23:22:18,062:test text
-2022-04-02 23:22:18,101:test text
-2022-04-02 23:22:18,305:test text
-2022-04-02 23:22:18,328:test text
-2022-04-02 23:22:18,328:test text
-2022-04-02 23:22:18,333:test text
-2022-04-02 23:22:18,406:test text
-2022-04-02 23:22:18,462:test text
-2022-04-02 23:22:18,519:test text
-2022-04-02 23:22:18,575:test text
-2022-04-02 23:22:18,581:test text
-2022-04-02 23:22:18,939:test text
-2022-04-02 23:22:18,963:test text
-2022-04-02 23:22:19,037:test text
-2022-04-02 23:22:19,039:test text
-2022-04-02 23:22:19,049:test text
-2022-04-02 23:22:19,049:test text
-2022-04-02 23:22:19,104:test text
-2022-04-02 23:22:19,167:test text
-2022-04-02 23:22:19,168:test text
-2022-04-02 23:22:19,177:test text
-2022-04-02 23:22:19,183:test text
-2022-04-02 23:22:19,209:test text
-2022-04-02 23:22:19,211:test text
-2022-04-02 23:22:19,214:test text
-2022-04-02 23:22:19,616:test text
-2022-04-02 23:22:19,923:test text
-2022-04-02 23:22:20,332:test text
-2022-04-02 23:22:20,640:test text
-2022-04-02 23:22:20,686:test text
-2022-04-02 23:22:20,752:test text
-2022-04-02 23:22:20,836:test text
-2022-04-02 23:22:21,005:test text
-2022-04-02 23:22:21,008:test text
-2022-04-02 23:22:21,014:test text
-2022-04-02 23:22:21,015:test text
-2022-04-02 23:22:21,098:test text
-2022-04-02 23:22:21,179:test text
-2022-04-02 23:22:21,183:test text
-2022-04-02 23:22:21,471:test text
-2022-04-02 23:22:21,765:test text
-2022-04-02 23:22:22,176:test text
-2022-04-02 23:22:22,258:test text
-2022-04-02 23:22:22,443:test text
-2022-04-02 23:22:22,514:test text
-2022-04-02 23:22:22,746:test text
-2022-04-02 23:22:22,986:test text
-2022-04-02 23:22:23,302:test text
-2022-04-02 23:22:23,441:test text
-2022-04-02 23:22:23,511:test text
-2022-04-02 23:22:23,512:test text
-2022-04-02 23:22:24,084:test text
-2022-04-02 23:22:24,232:test text
-2022-04-02 23:22:24,233:test text
-2022-04-02 23:22:24,246:test text
-2022-04-02 23:22:24,247:test text
-2022-04-02 23:22:24,251:test text
-2022-04-02 23:22:24,633:test text
-2022-04-02 23:22:24,745:test text
-2022-04-02 23:22:24,834:test text
-2022-04-02 23:22:24,987:test text
-2022-04-02 23:22:25,453:test text
-2022-04-02 23:22:25,454:test text
-2022-04-02 23:22:25,724:test text
-2022-04-02 23:22:26,064:test text
-2022-04-02 23:22:26,222:test text
-2022-04-02 23:22:26,411:test text
-2022-04-02 23:22:26,418:test text
-2022-04-02 23:22:26,592:test text
-2022-04-02 23:22:26,650:test text
-2022-04-02 23:22:26,670:test text
-2022-04-02 23:22:26,671:test text
-2022-04-02 23:22:26,680:test text
-2022-04-02 23:22:26,684:test text
-2022-04-02 23:22:26,698:test text
-2022-04-02 23:22:26,714:test text
-2022-04-02 23:22:26,937:test text
-2022-04-02 23:22:26,943:test text
-2022-04-02 23:22:26,978:test text
-2022-04-02 23:22:26,991:test text
-2022-04-02 23:22:27,077:test text
-2022-04-02 23:22:27,280:test text
-2022-04-02 23:22:27,287:test text
-2022-04-02 23:22:27,338:test text
-2022-04-02 23:22:27,355:test text
-2022-04-02 23:22:27,406:test text
-2022-04-02 23:22:27,407:test text
-2022-04-02 23:22:27,740:test text
-2022-04-02 23:22:27,744:test text
-2022-04-02 23:22:27,795:test text
-2022-04-02 23:22:27,933:test text
-2022-04-02 23:22:28,080:test text
-2022-04-02 23:22:28,321:test text
-2022-04-02 23:22:28,322:test text
-2022-04-02 23:22:28,322:test text
-2022-04-02 23:22:28,461:test text
-2022-04-02 23:22:28,463:test text
-2022-04-02 23:22:28,465:test text
-2022-04-02 23:22:28,465:test text
-2022-04-02 23:22:28,466:test text
-2022-04-02 23:22:28,471:test text
-2022-04-02 23:22:28,471:test text
-2022-04-02 23:22:28,481:test text
-2022-04-02 23:22:28,488:test text
-2022-04-02 23:22:28,494:test text
-2022-04-02 23:22:28,495:test text
-2022-04-02 23:22:28,529:test text
-2022-04-02 23:22:28,799:test text
-2022-04-02 23:22:28,806:test text
-2022-04-02 23:22:29,041:test text
-2022-04-02 23:22:29,045:test text
-2022-04-02 23:22:29,345:test text
-2022-04-02 23:22:29,404:test text
-2022-04-02 23:22:29,405:test text
-2022-04-02 23:22:29,412:test text
-2022-04-02 23:22:29,460:test text
-2022-04-02 23:22:29,612:test text
-2022-04-02 23:22:30,165:test text
-2022-04-02 23:22:30,286:test text
-2022-04-02 23:22:30,328:test text
-2022-04-02 23:22:30,368:test text
-2022-04-02 23:22:30,451:test text
-2022-04-02 23:22:30,486:test text
-2022-04-02 23:22:30,493:test text
-2022-04-02 23:22:30,743:test text
-2022-04-02 23:22:30,926:test text
-2022-04-02 23:22:31,041:test text
-2022-04-02 23:22:31,120:test text
-2022-04-02 23:22:31,393:test text
-2022-04-02 23:22:31,394:test text
-2022-04-02 23:22:31,700:test text
-2022-04-02 23:22:31,701:test text
-2022-04-02 23:22:31,701:test text
-2022-04-02 23:22:31,701:test text
-2022-04-02 23:22:31,745:test text
-2022-04-02 23:22:32,348:test text
-2022-04-02 23:22:32,371:test text
-2022-04-02 23:22:32,728:test text
-2022-04-02 23:22:32,737:test text
-2022-04-02 23:22:32,934:test text
-2022-04-02 23:22:32,942:test text
-2022-04-02 23:22:33,017:test text
-2022-04-02 23:22:33,225:test text
-2022-04-02 23:22:33,260:test text
-2022-04-02 23:22:33,306:test text
-2022-04-02 23:22:33,311:test text
-2022-04-02 23:22:33,312:test text
-2022-04-02 23:22:33,334:test text
-2022-04-02 23:22:33,598:test text
-2022-04-02 23:22:33,869:test text
-2022-04-02 23:22:33,952:test text
-2022-04-02 23:22:34,165:test text
-2022-04-02 23:22:34,366:test text
-2022-04-02 23:22:34,418:test text
-2022-04-02 23:22:34,582:test text
-2022-04-02 23:22:34,656:test text
-2022-04-02 23:22:34,794:test text
-2022-04-02 23:22:34,961:test text
-2022-04-02 23:22:35,384:test text
-2022-04-02 23:22:35,519:test text
-2022-04-02 23:22:35,747:test text
-2022-04-02 23:22:35,938:test text
-2022-04-02 23:22:36,307:test text
-2022-04-02 23:22:36,307:test text
-2022-04-02 23:22:36,329:test text
-2022-04-02 23:22:36,403:test text
-2022-04-02 23:22:36,406:test text
-2022-04-02 23:22:36,476:test text
-2022-04-02 23:22:36,564:test text
-2022-04-02 23:22:36,587:test text
-2022-04-02 23:22:36,776:test text
-2022-04-02 23:22:36,787:test text
-2022-04-02 23:22:36,788:test text
-2022-04-02 23:22:36,934:test text
-2022-04-02 23:22:37,033:test text
+2022-04-02 23:28:16,100:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
+2022-04-02 23:28:16,101:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
+2022-04-02 23:28:16,101:krw_balance : 73939348
+2022-04-02 23:28:16,102:program started
+2022-04-02 23:28:16,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,249:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,262:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,349:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,461:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,473:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,477:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,484:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,485:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,495:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,499:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,506:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,507:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,507:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,513:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,513:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,514:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,514:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,514:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,519:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,525:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,526:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,531:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,531:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,532:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,532:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,538:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:28:16,827:test text
+2022-04-02 23:28:16,831:test text
+2022-04-02 23:28:16,854:test text
+2022-04-02 23:28:16,858:test text
+2022-04-02 23:28:16,863:test text
+2022-04-02 23:28:16,869:test text
+2022-04-02 23:28:16,997:test text
+2022-04-02 23:28:16,999:test text
+2022-04-02 23:28:17,187:test text
+2022-04-02 23:28:17,200:test text
+2022-04-02 23:28:17,201:test text
+2022-04-02 23:28:17,208:test text
+2022-04-02 23:28:17,213:test text
+2022-04-02 23:28:17,218:test text
+2022-04-02 23:28:17,243:test text
+2022-04-02 23:28:17,248:test text
+2022-04-02 23:28:17,281:test text
+2022-04-02 23:28:17,391:test text
+2022-04-02 23:28:17,397:test text
+2022-04-02 23:28:17,470:test text
+2022-04-02 23:28:17,557:test text
+2022-04-02 23:28:17,713:test text
+2022-04-02 23:28:17,720:test text
+2022-04-02 23:28:17,720:test text
+2022-04-02 23:28:17,736:test text
+2022-04-02 23:28:17,740:test text
+2022-04-02 23:28:17,741:test text
+2022-04-02 23:28:17,802:test text
+2022-04-02 23:28:17,813:test text
+2022-04-02 23:28:17,824:test text
+2022-04-02 23:28:17,873:test text
+2022-04-02 23:28:17,940:test text
+2022-04-02 23:28:17,957:test text
+2022-04-02 23:28:17,962:test text
+2022-04-02 23:28:18,004:test text
+2022-04-02 23:28:18,058:test text
+2022-04-02 23:28:18,101:test text
+2022-04-02 23:28:18,137:test text
+2022-04-02 23:28:18,147:test text
+2022-04-02 23:28:18,203:test text
+2022-04-02 23:28:18,213:test text
+2022-04-02 23:28:18,252:test text
+2022-04-02 23:28:18,331:test text
+2022-04-02 23:28:18,363:test text
+2022-04-02 23:28:18,461:test text
+2022-04-02 23:28:18,545:test text
+2022-04-02 23:28:18,712:test text
+2022-04-02 23:28:18,802:test text
+2022-04-02 23:29:24,362:coin1 = KRW-ZIL, coin1_percent = 0.3338461538461539, coin1_open : 233.0, coin1_ma10 : 136.39, coin1_target : 265.5, coin1_status : 0
+2022-04-02 23:29:24,363:coin2 = KRW-WAVES, coin2_percent = 0.5, coin2_open : 63810.0, coin2_ma10 : 51219.0, coin2_target : 68530.0, coin2_status : 0
+2022-04-02 23:29:24,364:krw_balance : 73939348
+2022-04-02 23:29:24,364:program started
+2022-04-02 23:29:25,195:coin1 get
+2022-04-02 23:29:25,196:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,197:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,198:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,199:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,272:programm error : local variable 'coin2_current_price' referenced before assignment
+2022-04-02 23:29:25,273:test text
+2022-04-02 23:29:25,275:test text
+2022-04-02 23:29:25,276:test text
+2022-04-02 23:29:25,329:test text
+2022-04-02 23:29:25,332:test text
+2022-04-02 23:29:25,336:test text
+2022-04-02 23:29:25,448:test text
+2022-04-02 23:29:25,452:test text
+2022-04-02 23:29:25,458:test text
+2022-04-02 23:29:25,463:test text
+2022-04-02 23:29:25,467:test text
+2022-04-02 23:29:25,475:test text
+2022-04-02 23:29:25,475:test text
+2022-04-02 23:29:25,476:test text
+2022-04-02 23:29:25,476:test text
+2022-04-02 23:29:25,476:test text
+2022-04-02 23:29:25,502:test text
+2022-04-02 23:29:25,592:test text
+2022-04-02 23:29:25,598:test text
+2022-04-02 23:29:25,605:test text
+2022-04-02 23:29:25,611:test text
+2022-04-02 23:29:25,617:test text
+2022-04-02 23:29:25,623:test text
+2022-04-02 23:29:25,624:test text
+2022-04-02 23:29:25,624:test text
+2022-04-02 23:29:25,624:test text
+2022-04-02 23:29:25,625:test text
+2022-04-02 23:29:25,625:test text
+2022-04-02 23:29:25,625:test text
+2022-04-02 23:29:25,625:test text
+2022-04-02 23:29:25,626:test text
+2022-04-02 23:29:25,631:test text
+2022-04-02 23:29:25,635:test text
+2022-04-02 23:29:25,635:test text
+2022-04-02 23:29:25,642:test text
+2022-04-02 23:29:25,643:test text
+2022-04-02 23:29:25,643:test text
+2022-04-02 23:29:25,643:test text
+2022-04-02 23:29:25,643:test text
+2022-04-02 23:29:25,643:test text
+2022-04-02 23:29:25,644:test text
+2022-04-02 23:29:25,644:test text
+2022-04-02 23:29:25,644:test text
+2022-04-02 23:29:25,693:test text
+2022-04-02 23:29:25,711:test text
+2022-04-02 23:29:25,728:test text
+2022-04-02 23:29:25,738:test text
+2022-04-02 23:29:25,738:test text
+2022-04-02 23:29:25,741:test text
+2022-04-02 23:29:25,752:test text
+2022-04-02 23:29:25,752:test text
+2022-04-02 23:29:25,752:test text
+2022-04-02 23:29:25,752:test text
+2022-04-02 23:29:25,753:test text
+2022-04-02 23:29:25,755:test text
+2022-04-02 23:29:25,762:test text
+2022-04-02 23:29:25,763:test text
+2022-04-02 23:29:25,811:test text
+2022-04-02 23:29:25,816:test text
+2022-04-02 23:29:25,820:test text
+2022-04-02 23:29:25,829:test text
+2022-04-02 23:29:25,835:test text
+2022-04-02 23:29:26,119:test text
+2022-04-02 23:29:26,368:test text
+2022-04-02 23:29:26,734:test text
+2022-04-02 23:29:26,784:test text
+2022-04-02 23:29:26,784:test text
+2022-04-02 23:29:26,867:test text
+2022-04-02 23:29:26,902:test text
+2022-04-02 23:29:26,944:test text
+2022-04-02 23:29:26,989:test text
+2022-04-02 23:29:27,088:test text
+2022-04-02 23:29:27,210:test text
+2022-04-02 23:29:27,211:test text
+2022-04-02 23:29:27,215:test text
+2022-04-02 23:29:27,219:test text
+2022-04-02 23:29:27,220:test text
+2022-04-02 23:29:27,227:test text
+2022-04-02 23:29:27,227:test text
+2022-04-02 23:29:27,345:test text
+2022-04-02 23:29:27,407:test text
+2022-04-02 23:29:27,419:test text
+2022-04-02 23:29:27,423:test text
+2022-04-02 23:29:27,428:test text
+2022-04-02 23:29:27,428:test text
+2022-04-02 23:29:27,434:test text
+2022-04-02 23:29:27,434:test text
+2022-04-02 23:29:27,439:test text
+2022-04-02 23:29:27,440:test text
+2022-04-02 23:29:27,440:test text
+2022-04-02 23:29:27,445:test text
+2022-04-02 23:29:27,445:test text
+2022-04-02 23:29:27,445:test text
+2022-04-02 23:29:27,448:test text
+2022-04-02 23:29:27,454:test text
+2022-04-02 23:29:27,454:test text
+2022-04-02 23:29:27,455:test text
+2022-04-02 23:29:27,455:test text
+2022-04-02 23:29:27,456:test text
+2022-04-02 23:29:27,456:test text
+2022-04-02 23:29:27,456:test text
+2022-04-02 23:29:27,464:test text
+2022-04-02 23:29:27,516:test text
+2022-04-02 23:29:27,681:test text
+2022-04-02 23:29:27,740:test text
+2022-04-02 23:29:27,747:test text
+2022-04-02 23:29:27,796:test text
+2022-04-02 23:29:27,853:test text
+2022-04-02 23:29:27,949:test text
+2022-04-02 23:29:28,065:test text
+2022-04-02 23:29:28,070:test text
+2022-04-02 23:29:28,075:test text
+2022-04-02 23:29:28,086:test text
+2022-04-02 23:29:28,100:test text
+2022-04-02 23:29:28,164:test text
+2022-04-02 23:29:28,256:test text
+2022-04-02 23:29:28,259:test text
+2022-04-02 23:29:28,263:test text
+2022-04-02 23:29:28,296:test text
+2022-04-02 23:29:28,380:test text
+2022-04-02 23:29:28,399:test text
+2022-04-02 23:29:28,403:test text
+2022-04-02 23:29:28,408:test text
+2022-04-02 23:29:28,413:test text
+2022-04-02 23:29:28,414:test text
+2022-04-02 23:29:28,703:test text
+2022-04-02 23:29:28,707:test text
+2022-04-02 23:29:28,820:test text
+2022-04-02 23:29:28,884:test text
+2022-04-02 23:29:28,972:test text
+2022-04-02 23:29:29,038:test text
+2022-04-02 23:29:29,209:test text
+2022-04-02 23:29:29,236:test text
+2022-04-02 23:29:29,250:test text
+2022-04-02 23:29:29,280:test text
+2022-04-02 23:29:29,285:test text
+2022-04-02 23:29:29,338:test text
+2022-04-02 23:29:29,405:test text
+2022-04-02 23:29:29,501:test text
+2022-04-02 23:29:29,502:test text
+2022-04-02 23:29:29,599:test text
+2022-04-02 23:29:29,663:test text
+2022-04-02 23:29:29,727:test text
+2022-04-02 23:29:29,732:test text
+2022-04-02 23:29:29,985:test text
+2022-04-02 23:29:30,030:test text
+2022-04-02 23:29:30,079:test text
+2022-04-02 23:29:30,134:test text
+2022-04-02 23:29:30,161:test text
+2022-04-02 23:29:30,250:test text
+2022-04-02 23:29:30,290:test text
+2022-04-02 23:29:30,427:test text
+2022-04-02 23:29:30,432:test text
+2022-04-02 23:29:30,437:test text
+2022-04-02 23:29:30,443:test text
+2022-04-02 23:29:30,458:test text
+2022-04-02 23:29:30,459:test text
+2022-04-02 23:29:30,459:test text
+2022-04-02 23:29:30,460:test text
+2022-04-02 23:29:30,461:test text
+2022-04-02 23:29:30,461:test text
+2022-04-02 23:29:30,462:test text
+2022-04-02 23:29:30,464:test text
+2022-04-02 23:29:30,465:test text
+2022-04-02 23:29:30,465:test text
+2022-04-02 23:29:30,465:test text
+2022-04-02 23:29:30,469:test text
+2022-04-02 23:29:30,469:test text
+2022-04-02 23:29:30,469:test text
+2022-04-02 23:29:30,469:test text
+2022-04-02 23:29:30,470:test text
+2022-04-02 23:29:30,470:test text
+2022-04-02 23:29:30,470:test text
+2022-04-02 23:29:30,470:test text
+2022-04-02 23:29:30,472:test text
+2022-04-02 23:29:30,473:test text
+2022-04-02 23:29:30,473:test text
+2022-04-02 23:29:30,473:test text
+2022-04-02 23:29:30,473:test text
+2022-04-02 23:29:30,475:test text
+2022-04-02 23:29:30,479:test text
+2022-04-02 23:29:30,479:test text
+2022-04-02 23:29:30,479:test text
+2022-04-02 23:29:30,480:test text
+2022-04-02 23:29:30,483:test text
+2022-04-02 23:29:30,483:test text
+2022-04-02 23:29:30,484:test text
+2022-04-02 23:29:30,489:test text
+2022-04-02 23:29:30,489:test text
+2022-04-02 23:29:30,490:test text
+2022-04-02 23:29:30,490:test text
+2022-04-02 23:29:30,493:test text
+2022-04-02 23:29:30,496:test text
+2022-04-02 23:29:30,498:test text
+2022-04-02 23:29:30,503:test text
+2022-04-02 23:29:30,508:test text
+2022-04-02 23:29:30,517:test text
+2022-04-02 23:29:30,518:test text
+2022-04-02 23:29:30,556:test text
+2022-04-02 23:29:30,565:test text
+2022-04-02 23:29:30,572:test text
+2022-04-02 23:29:30,678:test text
+2022-04-02 23:29:30,680:test text
+2022-04-02 23:29:30,723:test text
+2022-04-02 23:29:30,812:test text
+2022-04-02 23:29:30,894:test text
+2022-04-02 23:29:31,447:test text
+2022-04-02 23:29:31,447:test text
+2022-04-02 23:29:31,447:test text
+2022-04-02 23:29:31,447:test text
+2022-04-02 23:29:31,447:test text
+2022-04-02 23:29:31,487:test text
