@@ -1,4 +1,3 @@
-from re import sub
 import websockets
 import asyncio
 import json
@@ -6,7 +5,7 @@ import time
 import datetime
 import logging
 
-logging.basicConfig(filename='uppro.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='wsc3.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 coin1 = "KRW-BTC"
 coin2 = "KRW-ETH"
@@ -34,7 +33,7 @@ coin20 = "KRW-SRM"
 
 # if now > end:
 #     end = end + datetime.timedelta(1)
-# a = "hi"
+a = "hi"
 
 
 async def program():
