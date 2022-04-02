@@ -27,11 +27,11 @@ coin19 = "KRW-MVL"
 coin20 = "KRW-SRM"
 
 now = datetime.datetime.now()
-end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11)
+end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=11, minutes=32)
 
 if now > end:
     end = end + datetime.timedelta(1)
-
+a = "hi"
 
 
 async def program():
@@ -42,10 +42,17 @@ async def program():
         subscribe_data = json.dumps(subscribe_fmt)
         await websocket.send(subscribe_data)
 
+        now = datetime.datetime.now()
+        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=22, minutes=41)
+
+        if now > end:
+            end = end + datetime.timedelta(1)
+
         while True:
             now = datetime.datetime.now()
+            print(a)
             if end < now:
-                end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=11)
+                break
             data = await websocket.recv()
             data = json.loads(data)
             # print(data['cd'], data['tp'])

@@ -439,7 +439,11 @@ async def program():
         subscribe_fmt = [{"ticket":"test"}, {"type":"ticker", "codes":[coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10, coin11, coin12, coin13, coin14, coin15, coin16, coin17, coin18, coin19, coin20], "isOnlyRealtime": True}, {"format":"SIMPLE"}]
         subscribe_data = json.dumps(subscribe_fmt)
         await websocket.send(subscribe_data)
+        now = datetime.datetime.now()
+        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=base_time)
 
+        if now > end:
+            end = end + datetime.timedelta(1)
         while True:
             try:
                 now = datetime.datetime.now()
