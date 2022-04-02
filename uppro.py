@@ -18,7 +18,7 @@ upbit = pyupbit.Upbit(access_key, secret_key)
 #     secret_key = lines[9].strip()
 #     upbit = pyupbit.Upbit(access_key, secret_key)
 
-k = 0.55
+k = 0.5
 target_v = 0.2
 m = 10
 amount = 20
@@ -95,7 +95,7 @@ def get_ma10(ticker):
 
 def buyable(ticker):
     price = get_target_price(ticker)
-    price = price * 1.002
+    price = price * 1.1
     if price - 1 < 0:
         if price * 10 - 1 < 0:
             price = price * 10000
@@ -158,7 +158,8 @@ def buy_limit(ticker, krw):
     percentage = get_percentage(ticker)
     krw = krw * percentage
     price = buyable(ticker)
-    unit = krw/float(price)
+    target = get_target_price(ticker)
+    unit = krw/float(target)
     upbit.buy_limit_order(ticker, price, unit)
 
 def sell_price(ticker):
@@ -167,7 +168,7 @@ def sell_price(ticker):
 
 def sellable(ticker):
     price = sell_price(ticker)
-    price = price * 0.998
+    price = price * 0.9
     if price - 1 < 0:
         if price * 10 - 1 < 0:
             price = price * 10000
