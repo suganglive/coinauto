@@ -46,7 +46,7 @@ async def program():
         await websocket.send(subscribe_data)
 
         now = datetime.datetime.now()
-        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=23, minutes=00)
+        end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(hours=23, minutes=1)
 
         if now > end:
             end = end + datetime.timedelta(1)
