@@ -435,7 +435,7 @@ async def program():
     uri = "wss://api.upbit.com/websocket/v1"
 
     async with websockets.connect(uri, ping_interval=60) as websocket:
-        subscribe_fmt = [{"ticket":"test"}, {"type":"ticker", "codes":[coin1, coin2], "isOnlyRealtime": True}, {"format":"SIMPLE"}]
+        subscribe_fmt = [{"ticket":"test"}, {"type":"ticker", "codes":[coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10, coin11, coin12, coin13, coin14, coin15, coin16, coin17, coin18, coin19, coin20], "isOnlyRealtime": True}, {"format":"SIMPLE"}]
         subscribe_data = json.dumps(subscribe_fmt)
         await websocket.send(subscribe_data)
 
@@ -466,12 +466,12 @@ async def program():
                 if end < now:
                     for ticker in tickers:
                         if upbit.get_order(ticker):
-                            logging.info(ticker, "buy order failed, cancle")
+                            # logging.info(ticker, "buy order failed, cancle")
                             upbit.cancel_order(upbit.get_order(ticker)[0]['uuid'])
                     for ticker in tickers:
                         if upbit.get_balance(ticker) != 0:
                             sell_limit(ticker)
-                            logging.info(ticker, "sell order submitted")
+                            # logging.info(f"{ticker}, sell order submitted")
 
                     tickers = rk.get_tickers(base = base)
                     coin1 = tickers[0]
@@ -676,6 +676,7 @@ async def program():
                         buy_limit(coin1, krw)
                         coin1_status = 1
                         logging.info("coin1 get")
+                        logging.info(f"coin1 current price :{coin1_current_price}, coin1 target :{coin1_target}")
                     except Exception as e:
                         logging.info("coin1 buy error", str(e))
 
@@ -684,6 +685,7 @@ async def program():
                         buy_limit(coin2, krw)
                         coin2_status = 1
                         logging.info("coin2 get")
+                        logging.info(f"coin2 current price :{coin2_current_price}, coin2 target :{coin2_target}")
                     except Exception as e:
                         logging.info("coin2 buy error", str(e))
 
@@ -692,6 +694,7 @@ async def program():
                         buy_limit(coin3, krw)
                         coin3_status = 1
                         logging.info("coin3 get")
+                        logging.info(f"coin3 current price :{coin3_current_price}, coin3 target :{coin3_target}")
                     except Exception as e:
                         logging.info("coin3 buy error", str(e))
 
@@ -701,6 +704,7 @@ async def program():
                         
                         coin4_status = 1
                         logging.info("coin4 get")
+                        logging.info(f"coin4 current price :{coin4_current_price}, coin4 target :{coin4_target}")
                     except Exception as e:
                         logging.info("coin4 buy error", str(e))
 
@@ -710,6 +714,7 @@ async def program():
                         
                         coin5_status = 1
                         logging.info("coin5 get")
+                        logging.info(f"coin5 current price :{coin5_current_price}, coin5 target :{coin5_target}")
                     except Exception as e:
                         logging.info("coin5 buy error", str(e))
 
@@ -719,6 +724,7 @@ async def program():
                         
                         coin6_status = 1
                         logging.info("coin6 get")
+                        logging.info(f"coin6 current price :{coin6_current_price}, coin6 target :{coin6_target}")
                     except Exception as e:
                         logging.info("coin6 buy error", str(e))
                 
@@ -728,6 +734,7 @@ async def program():
                         
                         coin7_status = 1
                         logging.info("coin7 get")
+                        logging.info(f"coin7 current price :{coin7_current_price}, coin7 target :{coin7_target}")
                     except Exception as e:
                         logging.info("coin7 buy error", str(e))
                 
@@ -737,6 +744,7 @@ async def program():
                         
                         coin8_status = 1
                         logging.info("coin8 get")
+                        logging.info(f"coin8 current price :{coin8_current_price}, coin8 target :{coin8_target}")
                     except Exception as e:
                         logging.info("coin8 buy error", str(e))
 
@@ -746,6 +754,7 @@ async def program():
                         
                         coin9_status = 1
                         logging.info("coin9 get")
+                        logging.info(f"coin9 current price :{coin9_current_price}, coin9 target :{coin9_target}")
                     except Exception as e:
                         logging.info("coin9 buy error", str(e))
 
@@ -755,6 +764,7 @@ async def program():
                         
                         coin10_status = 1
                         logging.info("coin10 get")
+                        logging.info(f"coin10 current price :{coin10_current_price}, coin10 target :{coin10_target}")
                     except Exception as e:
                         logging.info("coin10 buy error", str(e))
 
@@ -764,6 +774,7 @@ async def program():
                         
                         coin11_status = 1
                         logging.info("coin11 get")
+                        logging.info(f"coin11 current price :{coin11_current_price}, coin11 target :{coin11_target}")
                     except Exception as e:
                         logging.info("coin11 buy error", str(e))
 
@@ -773,6 +784,7 @@ async def program():
                         
                         coin12_status = 1
                         logging.info("coin12 get")
+                        logging.info(f"coin12 current price :{coin12_current_price}, coin12 target :{coin12_target}")
                     except Exception as e:
                         logging.info("coin12 buy error", str(e))
 
@@ -782,6 +794,7 @@ async def program():
                         
                         coin13_status = 1
                         logging.info("coin13 get")
+                        logging.info(f"coin13 current price :{coin13_current_price}, coin13 target :{coin13_target}")
                     except Exception as e:
                         logging.info("coin13 buy error", str(e))
 
@@ -791,6 +804,7 @@ async def program():
                         
                         coin14_status = 1
                         logging.info("coin14 get")
+                        logging.info(f"coin14 current price :{coin14_current_price}, coin14 target :{coin14_target}")
                     except Exception as e:
                         logging.info("coin14 buy error", str(e))
 
@@ -800,6 +814,7 @@ async def program():
                         
                         coin15_status = 1
                         logging.info("coin15 get")
+                        logging.info(f"coin15 current price :{coin15_current_price}, coin15 target :{coin15_target}")
                     except Exception as e:
                         logging.info("coin15 buy error", str(e))
 
@@ -809,6 +824,7 @@ async def program():
                         
                         coin16_status = 1
                         logging.info("coin16 get")
+                        logging.info(f"coin16 current price :{coin16_current_price}, coin16 target :{coin16_target}")
                     except Exception as e:
                         logging.info("coin16 buy error", str(e))
 
@@ -818,6 +834,7 @@ async def program():
                         
                         coin17_status = 1
                         logging.info("coin17 get")
+                        logging.info(f"coin17 current price :{coin17_current_price}, coin17 target :{coin17_target}")
                     except Exception as e:
                         logging.info("coin17 buy error", str(e))
 
@@ -827,6 +844,7 @@ async def program():
                         
                         coin18_status = 1
                         logging.info("coin18 get")
+                        logging.info(f"coin18 current price :{coin18_current_price}, coin18 target :{coin18_target}")
                     except Exception as e:
                         logging.info("coin18 buy error", str(e))
 
@@ -836,6 +854,7 @@ async def program():
                         
                         coin19_status = 1
                         logging.info("coin19 get")
+                        logging.info(f"coin19 current price :{coin19_current_price}, coin19 target :{coin19_target}")
                     except Exception as e:
                         logging.info("coin19 buy error", str(e))
 
@@ -845,6 +864,7 @@ async def program():
                         
                         coin20_status = 1
                         logging.info("coin20 get")
+                        logging.info(f"coin20 current price :{coin20_current_price}, coin20 target :{coin20_target}")
                     except Exception as e:
                         logging.info("coin20 buy error", str(e))
             except Exception as e:
