@@ -466,12 +466,10 @@ async def program():
                 if end < now:
                     for ticker in tickers:
                         if upbit.get_order(ticker):
-                            # logging.info(ticker, "buy order failed, cancle")
                             upbit.cancel_order(upbit.get_order(ticker)[0]['uuid'])
                     for ticker in tickers:
                         if upbit.get_balance(ticker) != 0:
                             sell_limit(ticker)
-                            # logging.info(f"{ticker}, sell order submitted")
 
                     tickers = rk.get_tickers(base = base)
                     coin1 = tickers[0]
@@ -599,6 +597,27 @@ async def program():
                     coin18_status = 0
                     coin19_status = 0
                     coin20_status = 0
+
+                    coin1_current_price = 0
+                    coin2_current_price = 0
+                    coin3_current_price = 0
+                    coin4_current_price = 0
+                    coin5_current_price = 0
+                    coin6_current_price = 0
+                    coin7_current_price = 0
+                    coin8_current_price = 0
+                    coin9_current_price = 0
+                    coin10_current_price = 0
+                    coin11_current_price = 0
+                    coin12_current_price = 0
+                    coin13_current_price = 0
+                    coin14_current_price = 0
+                    coin15_current_price = 0
+                    coin16_current_price = 0
+                    coin17_current_price = 0
+                    coin18_current_price = 0
+                    coin19_current_price = 0
+                    coin20_current_price = 0
 
                     krw1 = upbit.get_balance("KRW")
                     profit = krw1/krw -1
@@ -869,6 +888,11 @@ async def program():
                         logging.info("coin20 buy error", str(e))
             except Exception as e:
                 logging.info("programm error : " + str(e))
+                time.sleep(10)
+                async with websockets.connect(uri, ping_interval=60) as websocket:
+                    subscribe_fmt = [{"ticket":"test"}, {"type":"ticker", "codes":[coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10, coin11, coin12, coin13, coin14, coin15, coin16, coin17, coin18, coin19, coin20], "isOnlyRealtime": True}, {"format":"SIMPLE"}]
+                    subscribe_data = json.dumps(subscribe_fmt)
+                    await websocket.send(subscribe_data)
 
 async def main():
     await program()
