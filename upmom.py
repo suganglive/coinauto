@@ -1,3 +1,4 @@
+# 2022 04 06 시작 From noneed/uppro3.py h>t -> h>=t 변경. 이유 : 백원대 코인들 하나 올라가면 1퍼씩 올라감.
 import websockets
 import asyncio
 import json
@@ -9,7 +10,7 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='uppro3.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='upmom.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
