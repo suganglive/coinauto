@@ -15,12 +15,12 @@ access_key = "a"
 secret_key = "b"
 upbit = pyupbit.Upbit(access_key, secret_key)
 
-k = 0.5
+k = 0.8
 target_v = 0.2
 m = 10
 amount = 20
-base = '11h'
-base_time = 11
+base = '10h'
+base_time = 10
 
 def get_range(ticker):
     df = pb.get_daily_ohlcv_from_base(ticker = ticker, base = base)
@@ -690,7 +690,7 @@ async def program():
                 elif data['cd'] == coin20:
                     coin20_current_price = data['tp']
     
-                if coin1_current_price > coin1_target and coin1_status == 0 and coin1_open >= coin1_ma10:
+                if coin1_current_price >= coin1_target and coin1_status == 0 and coin1_open >= coin1_ma10:
                     try:
                         buy_limit(coin1, krw)
                         coin1_status = 1
@@ -699,7 +699,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin1 buy error", str(e))
 
-                if coin2_current_price > coin2_target and coin2_status == 0 and coin2_open >= coin2_ma10:
+                if coin2_current_price >= coin2_target and coin2_status == 0 and coin2_open >= coin2_ma10:
                     try:
                         buy_limit(coin2, krw)
                         coin2_status = 1
@@ -708,7 +708,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin2 buy error", str(e))
 
-                if coin3_current_price > coin3_target and coin3_status == 0 and coin3_open >= coin3_ma10:
+                if coin3_current_price >= coin3_target and coin3_status == 0 and coin3_open >= coin3_ma10:
                     try:
                         buy_limit(coin3, krw)
                         coin3_status = 1
@@ -717,7 +717,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin3 buy error", str(e))
 
-                if coin4_current_price > coin4_target and coin4_status == 0 and coin4_open >= coin4_ma10:
+                if coin4_current_price >= coin4_target and coin4_status == 0 and coin4_open >= coin4_ma10:
                     try:
                         buy_limit(coin4, krw)
                         
@@ -727,7 +727,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin4 buy error", str(e))
 
-                if coin5_current_price > coin5_target and coin5_status == 0 and coin5_open >= coin5_ma10:
+                if coin5_current_price >= coin5_target and coin5_status == 0 and coin5_open >= coin5_ma10:
                     try:
                         buy_limit(coin5, krw)
                         
@@ -737,7 +737,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin5 buy error", str(e))
 
-                if coin6_current_price > coin6_target and coin6_status == 0 and coin6_open >= coin6_ma10:
+                if coin6_current_price >= coin6_target and coin6_status == 0 and coin6_open >= coin6_ma10:
                     try:
                         buy_limit(coin6, krw)
                         
@@ -747,7 +747,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin6 buy error", str(e))
                 
-                if coin7_current_price > coin7_target and coin7_status == 0 and coin7_open >= coin7_ma10:
+                if coin7_current_price >= coin7_target and coin7_status == 0 and coin7_open >= coin7_ma10:
                     try:
                         buy_limit(coin7, krw)
                         
@@ -757,7 +757,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin7 buy error", str(e))
                 
-                if coin8_current_price > coin8_target and coin8_status == 0 and coin8_open >= coin8_ma10:
+                if coin8_current_price >= coin8_target and coin8_status == 0 and coin8_open >= coin8_ma10:
                     try:
                         buy_limit(coin8, krw)
                         
@@ -767,7 +767,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin8 buy error", str(e))
 
-                if coin9_current_price > coin9_target and coin9_status == 0 and coin9_open >= coin9_ma10:
+                if coin9_current_price >= coin9_target and coin9_status == 0 and coin9_open >= coin9_ma10:
                     try:
                         buy_limit(coin9, krw)
                         
@@ -777,7 +777,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin9 buy error", str(e))
 
-                if coin10_current_price > coin10_target and coin10_status == 0 and coin10_open >= coin10_ma10:
+                if coin10_current_price >= coin10_target and coin10_status == 0 and coin10_open >= coin10_ma10:
                     try:
                         buy_limit(coin10, krw)
                         
@@ -787,7 +787,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin10 buy error", str(e))
 
-                if coin11_current_price > coin11_target and coin11_status == 0 and coin11_open >= coin11_ma10:
+                if coin11_current_price >= coin11_target and coin11_status == 0 and coin11_open >= coin11_ma10:
                     try:
                         buy_limit(coin11, krw)
                         
@@ -797,7 +797,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin11 buy error", str(e))
 
-                if coin12_current_price > coin12_target and coin12_status == 0 and coin12_open >= coin12_ma10:
+                if coin12_current_price >= coin12_target and coin12_status == 0 and coin12_open >= coin12_ma10:
                     try:
                         buy_limit(coin12, krw)
                         
@@ -807,7 +807,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin12 buy error", str(e))
 
-                if coin13_current_price > coin13_target and coin13_status == 0 and coin13_open >= coin13_ma10:
+                if coin13_current_price >= coin13_target and coin13_status == 0 and coin13_open >= coin13_ma10:
                     try:
                         buy_limit(coin13, krw)
                         
@@ -817,7 +817,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin13 buy error", str(e))
 
-                if coin14_current_price > coin14_target and coin14_status == 0 and coin14_open >= coin14_ma10:
+                if coin14_current_price >= coin14_target and coin14_status == 0 and coin14_open >= coin14_ma10:
                     try:
                         buy_limit(coin14, krw)
                         
@@ -827,7 +827,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin14 buy error", str(e))
 
-                if coin15_current_price > coin15_target and coin15_status == 0 and coin15_open >= coin15_ma10:
+                if coin15_current_price >= coin15_target and coin15_status == 0 and coin15_open >= coin15_ma10:
                     try:
                         buy_limit(coin15, krw)
                         
@@ -837,7 +837,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin15 buy error", str(e))
 
-                if coin16_current_price > coin16_target and coin16_status == 0 and coin16_open >= coin16_ma10:
+                if coin16_current_price >= coin16_target and coin16_status == 0 and coin16_open >= coin16_ma10:
                     try:
                         buy_limit(coin16, krw)
                         
@@ -847,7 +847,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin16 buy error", str(e))
 
-                if coin17_current_price > coin17_target and coin17_status == 0 and coin17_open >= coin17_ma10:
+                if coin17_current_price >= coin17_target and coin17_status == 0 and coin17_open >= coin17_ma10:
                     try:
                         buy_limit(coin17, krw)
                         
@@ -857,7 +857,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin17 buy error", str(e))
 
-                if coin18_current_price > coin18_target and coin18_status == 0 and coin18_open >= coin18_ma10:
+                if coin18_current_price >= coin18_target and coin18_status == 0 and coin18_open >= coin18_ma10:
                     try:
                         buy_limit(coin18, krw)
                         
@@ -867,7 +867,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin18 buy error", str(e))
 
-                if coin19_current_price > coin19_target and coin19_status == 0 and coin19_open >= coin19_ma10:
+                if coin19_current_price >= coin19_target and coin19_status == 0 and coin19_open >= coin19_ma10:
                     try:
                         buy_limit(coin19, krw)
                         
@@ -877,7 +877,7 @@ async def program():
                     except Exception as e:
                         logging.info("coin19 buy error", str(e))
 
-                if coin20_current_price > coin20_target and coin20_status == 0 and coin20_open >= coin20_ma10:
+                if coin20_current_price >= coin20_target and coin20_status == 0 and coin20_open >= coin20_ma10:
                     try:
                         buy_limit(coin20, krw)
                         
