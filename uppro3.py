@@ -150,10 +150,10 @@ def sellable(ticker):
             price = price - 1
             price = price / 10000
         else:
-            price = price * 10000
+            price = price * 1000
             price = math.floor(price)
             price = price - 1
-            price = price / 10000
+            price = price / 1000
     elif len(str(math.floor(price))) == 1:
         price = price * 100
         price = math.floor(price)
