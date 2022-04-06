@@ -1,3 +1,4 @@
+#220407 주문 취소, 매도 주문 순서 바꿔줌. -> 먼저 매도 주문부터 내도록
 import websockets
 import asyncio
 import json
@@ -465,11 +466,11 @@ async def program():
                 now = datetime.datetime.now()
                 if end < now:
                     for ticker in tickers:
-                        if upbit.get_order(ticker):
-                            upbit.cancel_order(upbit.get_order(ticker)[0]['uuid'])
-                    for ticker in tickers:
                         if upbit.get_balance(ticker) != 0:
                             sell_limit(ticker)
+                    for ticker in tickers:
+                        if upbit.get_order(ticker):
+                            upbit.cancel_order(upbit.get_order(ticker)[0]['uuid'])
 
                     tickers = rk.get_tickers(base = base)
                     coin1 = tickers[0]
