@@ -209,7 +209,7 @@ async def program():
     k = 0.5
     target_v = 0.2
     m = 10
-    amount = 2
+    amount = 20
     base = '11h'
     base_time = 11
 

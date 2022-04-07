@@ -209,9 +209,9 @@ async def program():
     k = 0.5
     target_v = 0.2
     m = 10
-    amount = 2
-    base = '11h'
-    base_time = 11
+    amount = 20
+    base = '10h'
+    base_time = 10
 
     tickers = rk.get_tickers(base = base)
     coin1 = tickers[0]
