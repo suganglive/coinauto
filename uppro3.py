@@ -1,4 +1,5 @@
 #220407 주문 취소, 매도 주문 순서 바꿔줌. -> 먼저 매도 주문부터 내도록
+#220407(수정 필요) 연결 오류 시 해결 어케하지
 import websockets
 import asyncio
 import json
