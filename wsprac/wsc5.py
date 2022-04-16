@@ -2,7 +2,6 @@ import asyncio
 import websockets
 import json
 
-
 async def upbit_ws_client(callback):
     uri = 'wss://api.upbit.com/websocket/v1'
     async with websockets.connect(uri) as websocket:
@@ -27,7 +26,6 @@ async def upbit_ws_client(callback):
             print('111111111')
             await callback(await websocket.recv())
 
-
 # async def upbit_ws_client2(callback):
 #     uri = 'wss://api.upbit.com/websocket/v1'
 #     async with websockets.connect(uri) as websocket:
@@ -47,10 +45,8 @@ async def upbit_ws_client(callback):
 #             print('2222222222')
 #             await callback(await websocket.recv())
 
-
 async def response_message(*args, **kwargs):
     print(args)
-
 
 if __name__ == '__main__':
     tasks = [
