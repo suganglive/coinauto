@@ -25,8 +25,8 @@ k = 0.8
 target_v = 0.2
 m = 10
 amount = 20
-base = '11h'
-base_time = 11
+base = '10h'
+base_time = 10
 
 def get_range(ticker):
     df = pb.get_daily_ohlcv_from_base(ticker = ticker, base = base, count = 72)
@@ -285,7 +285,7 @@ async def program():
 
             except Exception as e:
                 logging.info("programm error : " + str(e))
-                time.sleep(60)
+                break
 
 async def main():
     await program()

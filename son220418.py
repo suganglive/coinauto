@@ -161,7 +161,8 @@ async def program():
                     dic[f'coin{i}_volume'] = 0
                 logging.info(f"coin{i} = {coins[i]}, coin{i}_open = {dic[f'coin{i}_open']}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_ma10 = {dic[f'coin{i}_ma10']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_volume = {dic[f'coin{i}_volume']}")
 
-            krw = round(upbit.get_balance("KRW"))
+            # krw = round(upbit.get_balance("KRW"))
+            krw = 10000000
             logging.info(f"krw_balance : {krw}")
             a = 1
         except Exception as e:
@@ -221,10 +222,11 @@ async def program():
                             dic[f'coin{i}_status'] = 1
                         logging.info(f"coin{i} = {coins[i]}, coin{i}_open = {dic[f'coin{i}_open']}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_ma10 = {dic[f'coin{i}_ma10']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_volume = {dic[f'coin{i}_volume']}")
 
-                    krw1 = round(upbit.get_balance("KRW"))
-                    profit = krw1/krw -1
-                    logging.info(f"profit : {profit}")
-                    krw = krw1
+                    # krw1 = round(upbit.get_balance("KRW"))
+                    # profit = krw1/krw -1
+                    # logging.info(f"profit : {profit}")
+                    # krw = krw1
+                    krw = 10000000
                     end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=base_time)
                     logging.info(f"krw_balance : {krw}")
 
@@ -285,7 +287,7 @@ async def program():
 
             except Exception as e:
                 logging.info("programm error : " + str(e))
-                time.sleep(60)
+                break
 
 async def main():
     await program()
