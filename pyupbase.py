@@ -13,10 +13,10 @@ def get_daily_ohlcv_from_base(ticker="KRW-BTC", base='11h', count = 144):
         df = pyupbit.get_ohlcv(ticker, interval="minute60", count = count)
         df = df.resample('24H', offset=base).agg(
             {'open': 'first', 'high': 'max', 'low': 'min', 'close': 'last', 'volume': 'sum'})
-        # time.sleep(0.5)
+        # time.sleep(3)
         return df
     except Exception as e:
         print("pyupbase", e)
         return None
 
-print(get_daily_ohlcv_from_base())
+
