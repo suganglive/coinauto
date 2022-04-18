@@ -280,7 +280,7 @@ async def program():
                     dic['coin19_current_price'] = data['tp']
 
                 for i in range(0, 20):
-                    if dic[f'coin{i}_current_price'] >= dic[f'coin{i}_target'] and dic[f'coin{i}_status'] == 0 and dic[f'coin{i}_current_open'] >= dic[f'coin{i}_ma10']:
+                    if dic[f'coin{i}_current_price'] >= dic[f'coin{i}_target'] and dic[f'coin{i}_status'] == 0 and dic[f'coin{i}_open'] >= dic[f'coin{i}_ma10']:
                         try:
                             buy_market(coins[i], krw, dic[f'coin{i}_percent'])
                             time.sleep(1)
