@@ -5,7 +5,7 @@
 #programming code error 2 -> 일단 서버 구분으로 통제해보자
 # 500원 이하 코인들 -> 타겟 buyable로 통일, 슬리피지 잡기 위해서
 # 나중에 랭킹도 가볍게 돌리기 가능?
-
+# 시그널 발생 후  매수까지 약  1초 걸림
 import websockets
 import asyncio
 import json
@@ -17,7 +17,7 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='pro220418.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='pro220419.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
@@ -187,7 +187,7 @@ async def program():
             try:
                 now = datetime.datetime.now()
                 if end < now:
-                    for i in coins:
+                    for i in range(0, 20):
                         if dic[f'coin{i}_volume'] != 0:
                             sell_market(coins[i], dic[f'coin{i}_volume'])
                             dic[f'coin{i}_volume'] = 0
@@ -286,14 +286,15 @@ async def program():
                             time.sleep(1)
                             dic[f'coin{i}_status'] = 1
                             dic[f'coin{i}_volume'] = upbit.get_balance(coins[i])
+                            avg_price = (krw * dic[f'coin{i}_percent'])/dic[f'coin{i}_volume']
                             logging.info(f"coin{i} get, current price = {dic[f'coin{i}_current_price']}, target = {dic[f'coin{i}_target']}")
-                            logging.info(f"coin{i}_volume = {dic[f'coin{i}_volume']}, avg price = {(krw * dic[f'coin{i}_percent'])/dic[f'coin{i}_volume']}")
+                            logging.info(f"coin{i}_volume = {dic[f'coin{i}_volume']}, avg price = {avg_price}, slippage = {avg_price/dic[f'coin{i}_target']}")
                         except Exception as e:
                             logging.info(f"coin{i} buy error", str(e))
 
             except Exception as e:
                 logging.info("programm error : " + str(e))
-                time.sleep(60)
+                break
 
 async def main():
     await program()
