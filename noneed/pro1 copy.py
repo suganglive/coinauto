@@ -105,6 +105,17 @@ def buyable(price):
     elif len(str(math.floor(price))) == 3:
         price = math.floor(price)
         price = price + 1
+    elif len(str(math.floor(price))) == 4:
+        if price % 10 <= 5: 
+            price = price / 10
+            price = math.floor(price)
+            price = price * 10
+            price = price + 5
+        else:
+            price = price / 10
+            price = math.floor(price)
+            price = price * 10
+            price = price + 10
     return price
 
 def buy_market(ticker, krw, percentage):

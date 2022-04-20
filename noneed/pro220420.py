@@ -1,3 +1,8 @@
+#수정필요(에러안나게 or 에러 나도 복구) programming code error -> break , #programming code error 2 -> 일단 서버 구분으로 통제해보자 // 매일 coins는 바뀌기 대문에 웹소켓에 새로 구독요청 보내야함. 해결
+# 나중에 랭킹도 가볍게 돌리기 가능?
+
+# 5000원 이하 코인들 -> 타겟 buyable로 통일, 슬리피지 잡기 위해서
+# ma10 안되는 것들 pop -> 슬리피지 잡기
 import websockets
 import asyncio
 import json
@@ -9,11 +14,17 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='pro220419.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 access_key = "a"
 secret_key = "b"
 upbit = pyupbit.Upbit(access_key, secret_key)
+
+# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+#     lines = f.readlines()
+#     access_key = lines[1].strip()
+#     secret_key = lines[2].strip()
+#     upbit = pyupbit.Upbit(access_key, secret_key)
 
 k = 0.5
 target_v = 0.2
@@ -152,25 +163,33 @@ async def program():
     a = 0
     while a == 0:
         try:
-            for i in range(19, -1, -1):
+            for i in range(0,20):
                 dic[f'coin{i}_open'] = get_open(coins[i])
                 dic[f'coin{i}_ma10'] = get_ma10(coins[i])
-                if dic[f'coin{i}_open'] < dic[f'coin{i}_ma10']:
-                    logging.info(f"coin excluded : {coins[i]}, open : {dic[f'coin{i}_open']}, ma10 : {dic[f'coin{i}_ma10']}")
-                    coins.pop(i) 
+                dic[f'coin{i}_target'] = get_target_price(coins[i])
+                dic[f'coin{i}_percent'] = get_percentage(coins[i])
+                dic[f'coin{i}_status'] = 0
+                dic[f'coin{i}_volume'] = upbit.get_balance(coins[i])
+                dic[f'coin{i}_current_price'] = 0
+                if dic[f'coin{i}_volume'] != 0:
+                    dic[f'coin{i}_status'] = 1
+                else:
+                    dic[f'coin{i}_volume'] = 0
+                if dic[f'coin{i}_open'] < dic[f'coin{i}_ma10'] and dic[f'coin{i}_status'] == 0:
+                    coins.pop(i)
 
             for i in range(0,len(coins)):
                 dic[f'coin{i}_open'] = get_open(coins[i])
                 dic[f'coin{i}_ma10'] = get_ma10(coins[i])
                 dic[f'coin{i}_target'] = get_target_price(coins[i])
                 dic[f'coin{i}_percent'] = get_percentage(coins[i])
+                dic[f'coin{i}_status'] = 0
                 dic[f'coin{i}_volume'] = upbit.get_balance(coins[i])
                 dic[f'coin{i}_current_price'] = 0
                 if dic[f'coin{i}_volume'] != 0:
                     dic[f'coin{i}_status'] = 1
                 else:
-                    dic[f'coin{i}_status'] = 0
-                logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
+                    dic[f'coin{i}_volume'] = 0
 
             krw = round(upbit.get_balance("KRW"))
             logging.info(f"krw_balance : {krw}")
@@ -191,9 +210,12 @@ async def program():
                 try:
                     now = datetime.datetime.now()
                     if end < now:
-                        for i in range(0, len(coins)):
+                        for i in range(0, 20):
                             if dic[f'coin{i}_volume'] != 0:
                                 sell_market(coins[i], dic[f'coin{i}_volume'])
+                                dic[f'coin{i}_volume'] = 0
+                                dic[f'coin{i}_status'] = 0
+                                logging.info(f"{coins[i]} sold")
 
                         tickers = rk.get_tickers(base = base)
                         coin1 = tickers[0]
@@ -218,11 +240,19 @@ async def program():
                         coin20 = tickers[19]
                         coins = [coin1, coin2, coin3, coin4, coin5, coin6, coin7, coin8, coin9, coin10, coin11, coin12, coin13, coin14, coin15, coin16, coin17, coin18, coin19, coin20]
 
-                        for i in range(19, -1, -1):
+                        for i in range(0,20):
                             dic[f'coin{i}_open'] = get_open(coins[i])
                             dic[f'coin{i}_ma10'] = get_ma10(coins[i])
+                            dic[f'coin{i}_target'] = get_target_price(coins[i])
+                            dic[f'coin{i}_percent'] = get_percentage(coins[i])
+                            dic[f'coin{i}_status'] = 0
+                            dic[f'coin{i}_current_price'] = 0
+                            dic[f'coin{i}_volume'] = upbit.get_balance(coins[i])
+                            if dic[f'coin{i}_volume'] != 0:
+                                dic[f'coin{i}_status'] = 1
+                            else:
+                                dic[f'coin{i}_status'] = 0
                             if dic[f'coin{i}_open'] < dic[f'coin{i}_ma10']:
-                                logging.info(f"coin excluded : {coins[i]}, open : {dic[f'coin{i}_open']}, ma10 : {dic[f'coin{i}_ma10']}")
                                 coins.pop(i)
                         
                         for i in range(0, len(coins)):
@@ -237,7 +267,7 @@ async def program():
                                 dic[f'coin{i}_status'] = 1
                             else:
                                 dic[f'coin{i}_status'] = 0                            
-                            logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
+                            logging.info(f"coin{i} = {coins[i]}, coin{i}_open = {dic[f'coin{i}_open']}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_ma10 = {dic[f'coin{i}_ma10']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_volume = {dic[f'coin{i}_volume']}")
 
                         krw1 = round(upbit.get_balance("KRW"))
                         profit = krw1/krw -1
@@ -245,53 +275,52 @@ async def program():
                         krw = krw1
                         end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=base_time)
                         logging.info(f"krw_balance : {krw}")
-                        logging.info("program start again")
                         break
 
                     data = await websocket.recv()
                     data = json.loads(data)
-                    if data['cd'] == coins[0]:
+                    if data['cd'] == coin1:
                         dic['coin0_current_price'] = data['tp']
-                    elif data['cd'] == coins[1]:
+                    elif data['cd'] == coin2:
                         dic['coin1_current_price'] = data['tp']
-                    elif data['cd'] == coins[2]:
+                    elif data['cd'] == coin3:
                         dic['coin2_current_price'] = data['tp']
-                    elif data['cd'] == coins[3]:
+                    elif data['cd'] == coin4:
                         dic['coin3_current_price'] = data['tp']
-                    elif data['cd'] == coins[4]:
+                    elif data['cd'] == coin5:
                         dic['coin4_current_price'] = data['tp']
-                    elif data['cd'] == coins[5]:
+                    elif data['cd'] == coin6:
                         dic['coin5_current_price'] = data['tp']
-                    elif data['cd'] == coins[6]:
+                    elif data['cd'] == coin7:
                         dic['coin6_current_price'] = data['tp']
-                    elif data['cd'] == coins[7]:
+                    elif data['cd'] == coin8:
                         dic['coin7_current_price'] = data['tp']
-                    elif data['cd'] == coins[8]:
+                    elif data['cd'] == coin9:
                         dic['coin8_current_price'] = data['tp']
-                    elif data['cd'] == coins[9]:
+                    elif data['cd'] == coin10:
                         dic['coin9_current_price'] = data['tp']
-                    elif data['cd'] == coins[10]:
+                    elif data['cd'] == coin11:
                         dic['coin10_current_price'] = data['tp']
-                    elif data['cd'] == coins[11]:
+                    elif data['cd'] == coin12:
                         dic['coin11_current_price'] = data['tp']
-                    elif data['cd'] == coins[12]:
+                    elif data['cd'] == coin13:
                         dic['coin12_current_price'] = data['tp']
-                    elif data['cd'] == coins[13]:
+                    elif data['cd'] == coin14:
                         dic['coin13_current_price'] = data['tp']
-                    elif data['cd'] == coins[14]:
+                    elif data['cd'] == coin15:
                         dic['coin14_current_price'] = data['tp']
-                    elif data['cd'] == coins[15]:
+                    elif data['cd'] == coin16:
                         dic['coin15_current_price'] = data['tp']
-                    elif data['cd'] == coins[16]:
+                    elif data['cd'] == coin17:
                         dic['coin16_current_price'] = data['tp']
-                    elif data['cd'] == coins[17]:
+                    elif data['cd'] == coin18:
                         dic['coin17_current_price'] = data['tp']
-                    elif data['cd'] == coins[18]:
+                    elif data['cd'] == coin19:
                         dic['coin18_current_price'] = data['tp']
-                    elif data['cd'] == coins[19]:
+                    elif data['cd'] == coin20:
                         dic['coin19_current_price'] = data['tp']
 
-                    for i in range(0, len(coins)):
+                    for i in range(0, 20):
                         if dic[f'coin{i}_current_price'] >= dic[f'coin{i}_target'] and dic[f'coin{i}_status'] == 0 and dic[f'coin{i}_open'] >= dic[f'coin{i}_ma10']:
                             try:
                                 buy_market(coins[i], krw, dic[f'coin{i}_percent'])
@@ -300,7 +329,7 @@ async def program():
                                 dic[f'coin{i}_volume'] = upbit.get_balance(coins[i])
                                 avg_price = (krw * dic[f'coin{i}_percent'])/dic[f'coin{i}_volume']
                                 logging.info(f"coin{i} get, current price = {dic[f'coin{i}_current_price']}, target = {dic[f'coin{i}_target']}")
-                                logging.info(f"coin{i}_volume = {dic[f'coin{i}_volume']}, avg price = {avg_price}, slippage = {(avg_price/dic[f'coin{i}_target'])-1}")
+                                logging.info(f"coin{i}_volume = {dic[f'coin{i}_volume']}, avg price = {avg_price}, slippage = {avg_price/dic[f'coin{i}_target']}")
                             except Exception as e:
                                 logging.info(f"coin{i} buy error", str(e))
 

@@ -1,3 +1,5 @@
+# 나중에 랭킹도 가볍게 돌리기 가능?
+# 자료수집 빠르게 -> 처음엔 걍 Ma10, open만 검색
 import websockets
 import asyncio
 import json
@@ -9,11 +11,17 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='pro220420_2.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-access_key = "a"
-secret_key = "b"
-upbit = pyupbit.Upbit(access_key, secret_key)
+# access_key = "a"
+# secret_key = "b"
+# upbit = pyupbit.Upbit(access_key, secret_key)
+
+with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+    lines = f.readlines()
+    access_key = lines[1].strip()
+    secret_key = lines[2].strip()
+    upbit = pyupbit.Upbit(access_key, secret_key)
 
 k = 0.5
 target_v = 0.2
@@ -173,6 +181,7 @@ async def program():
                 logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
 
             krw = round(upbit.get_balance("KRW"))
+            krw = 10000000
             logging.info(f"krw_balance : {krw}")
             a = 1
         except Exception as e:
@@ -239,13 +248,13 @@ async def program():
                                 dic[f'coin{i}_status'] = 0                            
                             logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
 
-                        krw1 = round(upbit.get_balance("KRW"))
-                        profit = krw1/krw -1
-                        logging.info(f"profit : {profit}")
-                        krw = krw1
+                        # krw1 = round(upbit.get_balance("KRW"))
+                        # profit = krw1/krw -1
+                        # logging.info(f"profit : {profit}")
+                        # krw = krw1
+                        krw = 10000000
                         end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=base_time)
                         logging.info(f"krw_balance : {krw}")
-                        logging.info("program start again")
                         break
 
                     data = await websocket.recv()
