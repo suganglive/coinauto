@@ -11,7 +11,7 @@ import pyupbase as pb
 import uprank20_2 as rk
 import math
 
-logging.basicConfig(filename='pro220420_2.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='pro220420_3.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
 # access_key = "a"
 # secret_key = "b"
@@ -181,7 +181,6 @@ async def program():
                 logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
 
             krw = round(upbit.get_balance("KRW"))
-            krw = 10000000
             logging.info(f"krw_balance : {krw}")
             a = 1
         except Exception as e:
@@ -248,11 +247,10 @@ async def program():
                                 dic[f'coin{i}_status'] = 0                            
                             logging.info(f"coin{i} = {coins[i]}, coin{i}_target = {dic[f'coin{i}_target']}, coin{i}_percent = {dic[f'coin{i}_percent']}, coin{i}_status = {dic[f'coin{i}_status']}")
 
-                        # krw1 = round(upbit.get_balance("KRW"))
-                        # profit = krw1/krw -1
-                        # logging.info(f"profit : {profit}")
-                        # krw = krw1
-                        krw = 10000000
+                        krw1 = round(upbit.get_balance("KRW"))
+                        profit = krw1/krw -1
+                        logging.info(f"profit : {profit}")
+                        krw = krw1
                         end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=base_time)
                         logging.info(f"krw_balance : {krw}")
                         break
