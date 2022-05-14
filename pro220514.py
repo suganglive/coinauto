@@ -1,5 +1,5 @@
 # 나중에 랭킹도 가볍게 돌리기 가능?
-# 자료수집 빠르게 -> 처음엔 걍 Ma10, open만 검색
+# coins 0 error solve
 import websockets
 import asyncio
 import json
@@ -23,7 +23,7 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     secret_key = lines[2].strip()
     upbit = pyupbit.Upbit(access_key, secret_key)
 
-k = 0.5
+k = 0.8
 target_v = 0.2
 m = 10
 amount = 20
@@ -194,6 +194,12 @@ async def program():
             subscribe_fmt = [{"ticket":"test"}, {"type":"ticker", "codes":coins, "isOnlyRealtime": True}, {"format":"SIMPLE"}]
             subscribe_data = json.dumps(subscribe_fmt)
             await websocket.send(subscribe_data)
+
+            if len(coins) == 0 and end > now:
+                now = datetime.datetime.now()
+                logging.info("There's no coin to invest. rest for 1 day")
+                time.sleep(3600)
+                continue
 
             while True:
                 try:

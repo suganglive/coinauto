@@ -15,7 +15,7 @@ access_key = "a"
 secret_key = "b"
 upbit = pyupbit.Upbit(access_key, secret_key)
 
-k = 0.5
+k = 0.7
 target_v = 0.2
 m = 10
 amount = 20
@@ -187,6 +187,12 @@ async def program():
             subscribe_data = json.dumps(subscribe_fmt)
             await websocket.send(subscribe_data)
 
+            if len(coins) == 0 and end > now:
+                now = datetime.datetime.now()
+                logging.info("There's no coin to invest. rest for 1 day")
+                time.sleep(3600)
+                continue
+
             while True:
                 try:
                     now = datetime.datetime.now()
@@ -245,7 +251,6 @@ async def program():
                         krw = krw1
                         end = datetime.datetime(now.year, now.month, now.day) + datetime.timedelta(days=1, hours=base_time)
                         logging.info(f"krw_balance : {krw}")
-                        logging.info("program start again")
                         break
 
                     data = await websocket.recv()
