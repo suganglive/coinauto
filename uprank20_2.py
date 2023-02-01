@@ -21,7 +21,11 @@ def get_tickers(base):
             # time.sleep(0.05)
         except:
             print(f"{tick}_error")
-
+            
+    print(dct)
     sorted_d = dict(sorted(dct.items(), key=operator.itemgetter(1), reverse=True))
+    print(sorted_d)
     a = list(sorted_d.keys())[:20]
     return a
+
+print(get_tickers("11h"))

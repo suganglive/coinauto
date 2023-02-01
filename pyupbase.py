@@ -19,4 +19,4 @@ def get_daily_ohlcv_from_base(ticker="KRW-BTC", base='11h', count = 144):
         print("pyupbase", e)
         return None
 
-
+# print(get_daily_ohlcv_from_base())
