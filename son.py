@@ -291,7 +291,7 @@ async def program():
                         dic['coin16_current_price'] = data['tp']
                     elif data['cd'] == coins[17]:
                         dic['coin17_current_price'] = data['tp']
-                    elif data['cd'] == coins[18]:
+                    elif data['cd'] == coins[18]
                         dic['coin18_current_price'] = data['tp']
                     elif data['cd'] == coins[19]:
                         dic['coin19_current_price'] = data['tp']
