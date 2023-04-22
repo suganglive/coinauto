@@ -1,12 +1,9 @@
-import pyupbit
+import upbit
 import operator
-import pandas as pd
-import numpy as np
-import pyupbase as pb
-import time
+import upbase as pb
 
-def get_tickers(base):
-    tickers = pyupbit.get_tickers("KRW")
+def get_ranks(base):
+    tickers = upbit.get_tickers()
     dct = {}
 
     for tick in tickers:
@@ -15,17 +12,12 @@ def get_tickers(base):
             vol1 = data['volume'].rolling(window=5).mean()
             close = data['close'].rolling(window=5).mean()
             vol2 = vol1 * close
-            # print(vol2)
             dct[tick] = vol2[-2]
-            # print(dct[tick])
-            # time.sleep(0.05)
         except:
-            print(f"{tick}_error")
+            pass
             
-    print(dct)
     sorted_d = dict(sorted(dct.items(), key=operator.itemgetter(1), reverse=True))
-    print(sorted_d)
     a = list(sorted_d.keys())[:20]
     return a
 
-print(get_tickers("11h"))
+# print(get_ranks('11h'))

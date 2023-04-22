@@ -1,11 +1,9 @@
 import jwt
 import hashlib
 import requests
+import ast
 import uuid
 from urllib.parse import urlencode, unquote
-import pyupbit
-import math
-
 
 ### 주문 조회 ###
 with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
@@ -13,6 +11,23 @@ with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
     ac = lines[1].strip()
     se = lines[2].strip()
 
+def get_tickers(filter='true'):
+    url = f"https://api.upbit.com/v1/market/all?isDetails={filter}"
+    headers = {"accept": "application/json"}
+    response = requests.get(url, headers=headers)
+    response = ast.literal_eval(response.text)
+
+    krw_market_list = []
+    for i in response.copy():
+        if filter == 'true':
+            if i['market_warning'] == 'CAUTION':
+                response.remove(i)
+    
+    for i in response:
+        if i['market'][:3] == 'KRW':
+            krw_market_list.append(i['market'])
+    
+    return krw_market_list
 
 class Up:
     def __init__(self, access, secret):
@@ -72,10 +87,13 @@ class Up:
         함수 아웃풋 : 인풋 화폐 balance
         함수 설명 : 특정 화폐의 balance를 가져온다.
         """
+        if currency != "KRW":
+            currency = currency[4:]
         res = self.get_requests()
         for i in res:
             if i['currency'] == currency:
                 return float(i['balance'])
+        return 0
 
     def buy_market_order(self, ticker, price, percentage):
         """
@@ -120,3 +138,11 @@ class Up:
 
         except:
             print("sell_market_order method error")
+
+# upbit = Up(ac, se)
+# print(type(upbit.get_balance("KRW-BTC")))
+# print(upbit.get_balance("KRW"))
+
+# import pyupbit
+# up = pyupbit.Upbit(ac, se)
+# print(up.get_balance("KRW-BTC"))
