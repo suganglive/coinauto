@@ -1,0 +1,10 @@
+2023-04-22 22:34:04,723:default value error : 'NoneType' object has no attribute 'iloc'
+2023-04-22 22:34:15,682:coin excluded : KRW-BTC, open : 36446000.0, ma10 : 38930600.0
+2023-04-22 22:34:19,071:coin0 = KRW-POLYX, coin0_target = 328, coin0_percent = 0.4922727272727273, coin0_status = 0
+2023-04-22 22:34:19,170:krw_balance : 999629
+2023-04-22 22:34:19,171:program started
+2023-04-22 22:57:33,769:default value error : 'NoneType' object is not subscriptable
+2023-04-22 22:57:47,713:coin0 = KRW-ARB, coin0_target = 2085, coin0_percent = 0.5, coin0_status = 0
+2023-04-22 22:57:49,791:coin1 = KRW-POLYX, coin1_target = 328, coin1_percent = 0.4922727272727273, coin1_status = 0
+2023-04-22 22:57:49,877:krw_balance : 999629
+2023-04-22 22:57:49,877:program started

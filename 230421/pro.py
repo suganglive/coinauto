@@ -11,9 +11,9 @@ import math
 
 logging.basicConfig(filename='/Users/sugang/Documents/GitHub/coinauto/230421/son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-access_key = "a"
-secret_key = "b"
-upbit = pyupbit.Upbit(access_key, secret_key)
+# access_key = "a"
+# secret_key = "b"
+# upbit = pyupbit.Upbit(access_key, secret_key)
 
 # with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
 #     lines = f.readlines()

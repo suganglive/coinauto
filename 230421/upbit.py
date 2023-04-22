@@ -5,11 +5,11 @@ import ast
 import uuid
 from urllib.parse import urlencode, unquote
 
-### 주문 조회 ###
-with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
-    lines = f.readlines()
-    ac = lines[1].strip()
-    se = lines[2].strip()
+# ### 주문 조회 ###
+# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+#     lines = f.readlines()
+#     ac = lines[1].strip()
+#     se = lines[2].strip()
 
 def get_tickers(filter='true'):
     url = f"https://api.upbit.com/v1/market/all?isDetails={filter}"
@@ -90,10 +90,12 @@ class Up:
         if currency != "KRW":
             currency = currency[4:]
         res = self.get_requests()
-        for i in res:
-            if i['currency'] == currency:
-                return float(i['balance'])
-        return 0
+        try:
+            for i in res:
+                if i['currency'] == currency:
+                    return float(i['balance'])
+        except:
+            return 0
 
     def buy_market_order(self, ticker, price, percentage):
         """
@@ -139,9 +141,16 @@ class Up:
         except:
             print("sell_market_order method error")
 
+
+# ### 주문 조회 ###
+# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+#     lines = f.readlines()
+#     ac = lines[1].strip()
+#     se = lines[2].strip()
+
 # upbit = Up(ac, se)
-# print(type(upbit.get_balance("KRW-BTC")))
-# print(upbit.get_balance("KRW"))
+# print(upbit.get_balance("KRW-BTC"))
+# print(upbit.get_balance("KRW-POLYX"))
 
 # import pyupbit
 # up = pyupbit.Upbit(ac, se)
