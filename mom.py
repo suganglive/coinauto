@@ -19,7 +19,7 @@ upbit = up.Up(access_key, secret_key)
 #     lines = f.readlines()
 #     access_key = lines[1].strip()
 #     secret_key = lines[2].strip()
-#     upbit = up.Up(access_key, secret_key)
+#     upbit = upbit.Up(access_key, secret_key)
 
 target_v = 0.3
 amount = 2

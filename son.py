@@ -11,15 +11,15 @@ import math
 
 logging.basicConfig(filename='son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-# access_key = "a"
-# secret_key = "b"
-# upbit = up.Up(access_key, secret_key)
+access_key = "a"
+secret_key = "b"
+upbit = up.Up(access_key, secret_key)
 
-with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
-    lines = f.readlines()
-    access_key = lines[1].strip()
-    secret_key = lines[2].strip()
-    upbit = up.Up(access_key, secret_key)
+# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+#     lines = f.readlines()
+#     access_key = lines[1].strip()
+#     secret_key = lines[2].strip()
+#     upbit = upbit.Up(access_key, secret_key)
 
 target_v = 0.3
 amount = 2
@@ -149,6 +149,7 @@ async def program():
     coin1 = tickers[0]
     coin2 = tickers[1]
     coins = [coin1, coin2]
+
     a = 0
     while a == 0:
         try:
