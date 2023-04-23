@@ -142,16 +142,8 @@ class Up:
             print("sell_market_order method error")
 
 
-# ### 주문 조회 ###
-# with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
-#     lines = f.readlines()
-#     ac = lines[1].strip()
-#     se = lines[2].strip()
-
-# upbit = Up(ac, se)
-# print(upbit.get_balance("KRW-BTC"))
-# print(upbit.get_balance("KRW-POLYX"))
-
-# import pyupbit
-# up = pyupbit.Upbit(ac, se)
-# print(up.get_balance("KRW-BTC"))
+### 주문 조회 ###
+with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
+    lines = f.readlines()
+    ac = lines[1].strip()
+    se = lines[2].strip()
