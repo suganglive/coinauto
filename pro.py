@@ -1,7 +1,7 @@
 import websockets
 import asyncio
 import json
-import upbit
+import upbit as up
 import time
 import datetime
 import logging
@@ -9,11 +9,11 @@ import upbase as pb
 import uprank20 as rk
 import math
 
-logging.basicConfig(filename='/Users/sugang/Documents/GitHub/coinauto/230421/son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
+logging.basicConfig(filename='son.log', level=logging.INFO, format='%(asctime)s:%(message)s')
 
-# access_key = "a"
-# secret_key = "b"
-# upbit = pyupbit.Upbit(access_key, secret_key)
+access_key = "a"
+secret_key = "b"
+upbit = up.Up(access_key, secret_key)
 
 # with open("/Users/sugang/Desktop/school/" + "bibi.txt")as f:
 #     lines = f.readlines()
